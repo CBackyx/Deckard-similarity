@@ -1,3 +1,35 @@
+# Similarity Calculation for Solidity
+
+> Edited by CBackyxM
+
+Currenty support a trivial calculation of Solidity(5.x) similarity
+
+* Utilize the vector built by Deckard, and count cosine, 1-norm and 2-norm
+
+## Usage
+
+```bash
+
+cd src/main
+
+./build.sh
+
+./solvecgen [solidity-filename] --start-line-number [start-line-num] --end-line-number [end-line-num]
+# For example
+# ./solvecgen v1.sol --start-line-number 1 --end-line-number 135
+
+# Run similarity calculating script
+python3 calSolVecSimilarity.py [the-first-solidity-filename] [the-second-solidity-filename]
+# For example
+# python3 calSolVecSimilarity.py v0.sol v1.sol
+
+```
+
+
+
+# Original README
+
+```
 
 This is a release package of Deckard -- a tree-based, scalable, and accurate
 code clone detection tool. It is also capable of reporting clone-related bugs.
@@ -277,31 +309,4 @@ refer to "src/vgen/treeTra/token-tree-map.h" for more implementation details):
 Enjoy and Feedback :=)
 @Deckard : Am I a clone?
 
-
-# Similarity Calculation for Solidity
-
-> Edited by CBackyxM
-
-Currenty support a trivial calculation of Solidity(5.x) similarity
-
-* Utilize the vector built by Deckard, and count cosine, 1-norm and 2-norm
-
-## Usage
-
-```bash
-
-cd src/main
-
-./build.sh
-
-./solvecgen [solidity-filename] --start-line-number [start-line-num] --end-line-number [end-line-num]
-# For example
-# ./solvecgen v1.sol --start-line-number 1 --end-line-number 135
-
-# Run similarity calculating script
-python3 calSolVecSimilarity.py [the-first-solidity-filename] [the-second-solidity-filename]
-# For example
-# python3 calSolVecSimilarity.py v0.sol v1.sol
-
 ```
-
