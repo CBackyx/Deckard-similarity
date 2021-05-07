@@ -299,6 +299,11 @@ storage			{
 		yylvalp->t = new Terminal(name2id["STORAGE"],yytext,line);
 		lasttoken = STORAGE;
 		return(STORAGE); }
+calldata	 	{
+		count();
+		yylvalp->t = new Terminal(name2id["CALLDATA"],yytext,line);
+		lasttoken = CALLDATA;
+		return(CALLDATA); }
 throw			{
 		count();
 		yylvalp->t = new Terminal(name2id["THROW"],yytext,line);

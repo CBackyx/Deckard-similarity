@@ -45,6 +45,7 @@
 "functionTypeName",
 "expression", // and all sub-expressions are atomic
 "identifier_list_with_comma_or_empty",
+"variableDeclaration_list_with_comma_or_empty",
 "expressionStatement",
 "assemblyExpression",
 "assemblyLocalDefinition",

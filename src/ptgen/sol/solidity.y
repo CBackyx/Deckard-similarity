@@ -195,7 +195,7 @@ storage_location_or_empty: /* empty */
 storageLocation:
 	       MEMORY
 		| STORAGE
-		;
+		| CALLDATA;
 
 modifierDefinition:
 		  MODIFIER identifier parameter_list_or_empty block
@@ -334,6 +334,7 @@ typeName:
 	| mapping
 	| typeName '[' expression_or_empty ']' /* This rule requires LR(*) to differentiate from many other rules, e.g., expression: expression '[' expression ']'; use glr-parser */
 	| functionTypeName
+	| ADDRESS PAYABLE
 	;
 
 userDefinedTypeName: /* exclude certain special identifier from typeName: FROM, EMIT, '_' */
@@ -523,7 +524,29 @@ variableDeclarationStatement:
 variable_declaration_left:
 			 VAR identifierList
 			| variableDeclaration
+			| '(' variableDeclarationList ')'
 			;
+
+variableDeclarationList: 
+				variableDeclaration_or_empty variableDeclaration_list_with_comma_or_empty 
+				;
+
+variableDeclaration_or_empty:
+					| variableDeclaration
+				;
+
+variableDeclaration_list_with_comma_or_empty: /* empty */
+				   | variableDeclaration_list_with_comma
+				;
+
+variableDeclaration_list_with_comma:
+				variableDeclaration_with_comma
+				| variableDeclaration_list_with_comma variableDeclaration_with_comma
+				;
+
+variableDeclaration_with_comma:
+				',' variableDeclaration
+				;
 
 identifierList: /* : '(' ( identifier? ',' )* identifier? ')' ; */
 	      '(' identifier_list_with_comma_or_empty identifier_or_empty ')'
