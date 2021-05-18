@@ -1,7 +1,10 @@
 import subprocess
 import sys
+import os
 import numpy as np
 from numpy.linalg import norm
+
+FNULL = open(os.devnull, 'w')
 
 sol_filename0 = sys.argv[1]
 sol_filename1 = sys.argv[2]
@@ -18,11 +21,13 @@ with open(sol_filename1, 'r', encoding='utf-8') as ifile:
 
 # Get vector of file0
 cmd = ['./solvecgen', sol_filename0, '--start-line-number', '1', '--end-line-number', str(line_num0)]
-process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+# process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+process = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 process.wait()
 
 cmd = ['./solvecgen', sol_filename1, '--start-line-number', '1', '--end-line-number', str(line_num1)]
-process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+# process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+process = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 process.wait()
 
 solvec_filename0 = sys.argv[1] + ".vec"

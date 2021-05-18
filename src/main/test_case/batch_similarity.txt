@@ -1,0 +1,66 @@
+SPA0
+
+Vec cosine:  0.9973056177157777
+Difference 1-norm 431.0
+Difference 2-norm 131.53326575433303
+
+SPA1
+
+Vec cosine:  0.9995476938853316
+Difference 1-norm 323.0
+Difference 2-norm 89.28045698807774
+
+SPA2
+
+Vec cosine:  0.9973056177157777
+Difference 1-norm 431.0
+Difference 2-norm 131.53326575433303
+
+SPA3
+
+Vec cosine:  0.9999130743431528
+Difference 1-norm 37.0
+Difference 2-norm 8.306623862918075
+
+SPA4
+
+Vec cosine:  0.9991799235099394
+Difference 1-norm 425.0
+Difference 2-norm 127.33027919548437
+
+SPA5
+
+Vec cosine:  0.998646214126022
+Difference 1-norm 176.0
+Difference 2-norm 46.26013402488151
+
+SPA6
+
+Vec cosine:  0.9996744144092437
+Difference 1-norm 174.0
+Difference 2-norm 50.75431016179808
+
+SECPA0
+
+Vec cosine:  0.9968934625770165
+Difference 1-norm 703.0
+Difference 2-norm 217.45114393812693
+
+SECPA1
+
+Vec cosine:  0.9994601020566677
+Difference 1-norm 212.0
+Difference 2-norm 64.35837163881635
+
+SA0
+
+Vec cosine:  0.9955785508316641
+Difference 1-norm 616.0
+Difference 2-norm 185.81173267584586
+
+SA1
+
+Vec cosine:  0.9973056177157777
+Difference 1-norm 431.0
+Difference 2-norm 131.53326575433303
+
