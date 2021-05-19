@@ -23,15 +23,19 @@ contract StockPurchaseAgreementTemplate {
     event Terminated_OutOfDate();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1311868800;
+        EffectiveTime = NaN;
         CloseTime = 946656000;
         OutSideClosingDate = 946656000;
+        sellerName = "Mark Capital";
+        seller = address(0);
+        buyerName =["Craig Pierson"];
+        buyer =[address(0)];
     }
     function pay_0() public payable {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
         require(now <= CloseTime);
-        uint256 price = 37100;
+        uint256 price = 35000;
         require(msg.value == price);
         emit Payed(0);
         pricePayedByBuyer[0] += price;

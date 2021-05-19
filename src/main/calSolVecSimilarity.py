@@ -55,6 +55,6 @@ with open(solvec_filename1, "r", encoding='utf-8') as ifile:
 
 cos_sim = np.inner(solvec0, solvec1) / (norm(solvec0) * norm(solvec1))
 print()
-print("Vec cosine: ", cos_sim)
+print("Vec cosine", cos_sim)
 print("Difference 1-norm", np.linalg.norm((solvec0 - solvec1), ord=1))
 print("Difference 2-norm", np.linalg.norm((solvec0 - solvec1), ord=2))

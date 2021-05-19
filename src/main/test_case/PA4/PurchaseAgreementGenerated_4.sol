@@ -23,15 +23,19 @@ contract StockPurchaseAgreementTemplate {
     event Terminated_OutOfDate();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1311868800;
+        EffectiveTime = 1430668800;
         CloseTime = 946656000;
         OutSideClosingDate = 946656000;
+        sellerName = "Solar Power";
+        seller = address(0);
+        buyerName =["Yes Yield Investments Limited"];
+        buyer =[address(0)];
     }
     function pay_0() public payable {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
         require(now <= CloseTime);
-        uint256 price = 37100;
+        uint256 price = 25002000;
         require(msg.value == price);
         emit Payed(0);
         pricePayedByBuyer[0] += price;
@@ -80,6 +84,22 @@ contract StockPurchaseAgreementTemplate {
         }
         require(validSender);
         fileHashMap[fileName] = hashCode;
+    }
+    function terminateConfirm(uint32 buyerIndex) public {
+        require(buyerIndex < buyer.length);
+        if(msg.sender == seller) {
+            terminateSellerConfirmed[buyerIndex] = true;
+            return;
+        }
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            if(msg.sender == buyer[i]) {
+                terminateBuyerConfirmed[i] = true;
+                return;
+            }
+        }
     }
     function terminateByOutOfDate() public {
         require(now >= OutSideClosingDate);

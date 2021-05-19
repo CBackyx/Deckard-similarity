@@ -2,10 +2,15 @@ import subprocess
 import sys
 import os
 
-testcase_Dirs = [[], # PA
-                ["0", "1", "2", "3", "4", "5", "6"], # SPA
-                ["0", "1"], # SECPA
-                ["0", "1"]]; # SA
+# testcase_Dirs = [[], # PA
+#                 ["0", "1", "2", "3", "4", "5", "6"], # SPA
+#                 ["0", "1"], # SECPA
+#                 ["0", "1"]]; # SA
+
+testcase_Dirs = [["0", "1", "2", "3", "4", "4", "5"], # PA
+                ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], # SPA
+                ["0", "1", "2", "3"], # SECPA
+                ["0", "1"]] # SA
 
 groundTruthNamePatterns = ["PurchaseAgreementGroundTruth_", "StockPurchaseAgreementGroundTruth_", "SecurityPurchaseAgreementGroundTruth_", "SecurityAgreementGroundTruth_"]
 generatedNamePatterns = ["PurchaseAgreementGenerated_", "StockPurchaseAgreementGenerated_", "SecurityPurchaseAgreementGenerated_", "SecurityAgreementGenerated_"]

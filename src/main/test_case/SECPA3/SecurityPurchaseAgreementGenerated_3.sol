@@ -23,15 +23,19 @@ contract StockPurchaseAgreementTemplate {
     event Terminated_OutOfDate();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1311868800;
+        EffectiveTime = 1619539200;
         CloseTime = 946656000;
         OutSideClosingDate = 946656000;
+        sellerName = "TEGO CYBER INC.";
+        seller = address(0);
+        buyerName =["TEGO CYBER INC."];
+        buyer =[address(0)];
     }
     function pay_0() public payable {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
         require(now <= CloseTime);
-        uint256 price = 37100;
+        uint256 price = 33507.5;
         require(msg.value == price);
         emit Payed(0);
         pricePayedByBuyer[0] += price;

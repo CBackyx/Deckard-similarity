@@ -1,0 +1,38 @@
+{
+    "ContractCategory": "StockPurchaseAgreement",
+    "SellerName": [
+        "VW Credit"
+    ],
+    "BuyerName": [
+        "Volkswagen Auto Lease/Loan Underwritten Funding"
+    ],
+    "EffectiveTime": [
+        "May\u00a019, 2020"
+    ],
+    "CloseTime": [],
+    "OutSideClosingDate": [],
+    "Payments": [
+        {
+            "From": [
+                "Volkswagen Auto Lease/Loan Underwritten Funding"
+            ],
+            "To": [
+                "VW Credit"
+            ],
+            "TimeLimit": {
+                "operator": "<=",
+                "leftOp": "now",
+                "rightOp": "CloseTime",
+                "disabled": false
+            },
+            "PurchasePrice": 1290803105.57,
+            "Transfer": true
+        }
+    ],
+    "Transfers": true,
+    "Terminations": {
+        "TransferTermination": true,
+        "OutOfDateTermination": false,
+        "OtherTermination": true
+    }
+}
