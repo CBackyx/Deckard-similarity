@@ -26,12 +26,12 @@
                 "disabled": false
             },
             "PurchasePrice": 25002000,
-            "Transfer": true
+            "Transfer": false
         }
     ],
     "Transfers": true,
     "Terminations": {
-        "TransferTermination": true,
+        "TransferTermination": false,
         "OutOfDateTermination": false,
         "OtherTermination": true
     }

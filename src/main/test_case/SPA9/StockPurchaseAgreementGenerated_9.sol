@@ -24,8 +24,12 @@ contract StockPurchaseAgreementTemplate {
     event Closed();
     constructor() public payable {
         EffectiveTime = 1257091200;
-        CloseTime = 946656000;
-        OutSideClosingDate = 946656000;
+        CloseTime = 0;
+        OutSideClosingDate = 0;
+        sellerName = "";
+        seller = address(0);
+        buyerName =[""];
+        buyer =[address(0)];
     }
     function pay_0() public payable {
         require(state[0] == State.Created || state[0] == State.Locked);
@@ -80,17 +84,6 @@ contract StockPurchaseAgreementTemplate {
         }
         require(validSender);
         fileHashMap[fileName] = hashCode;
-    }
-    function terminateByOutOfDate() public {
-        require(now >= OutSideClosingDate);
-        emit Terminated_OutOfDate();
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            state[i] = State.Inactive;
-            buyer[i].transfer(pricePayedByBuyer[i]);
-        }
     }
     function close() public {
         require(now >= CloseTime);

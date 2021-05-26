@@ -24,18 +24,18 @@ contract StockPurchaseAgreementTemplate {
     event Closed();
     constructor() public payable {
         EffectiveTime = 1589817600;
-        CloseTime = 946656000;
-        OutSideClosingDate = 946656000;
+        CloseTime = 0;
+        OutSideClosingDate = 0;
         sellerName = "VW Credit";
         seller = address(0);
-        buyerName =["Volkswagen Auto Lease/Loan Underwritten Funding"];
+        buyerName =["VOLKSWAGEN AUTO LEASE/LOAN UNDERWRITTEN FUNDING"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
         require(now <= CloseTime);
-        uint256 price = 1290803105.57;
+        uint256 price = 1290803105;
         require(msg.value == price);
         emit Payed(0);
         pricePayedByBuyer[0] += price;
@@ -84,33 +84,6 @@ contract StockPurchaseAgreementTemplate {
         }
         require(validSender);
         fileHashMap[fileName] = hashCode;
-    }
-    function terminateConfirm(uint32 buyerIndex) public {
-        require(buyerIndex < buyer.length);
-        if(msg.sender == seller) {
-            terminateSellerConfirmed[buyerIndex] = true;
-            return;
-        }
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            if(msg.sender == buyer[i]) {
-                terminateBuyerConfirmed[i] = true;
-                return;
-            }
-        }
-    }
-    function terminateByOutOfDate() public {
-        require(now >= OutSideClosingDate);
-        emit Terminated_OutOfDate();
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            state[i] = State.Inactive;
-            buyer[i].transfer(pricePayedByBuyer[i]);
-        }
     }
     function close() public {
         require(now >= CloseTime);

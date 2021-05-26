@@ -3,14 +3,12 @@ pragma solidity 0.5.16;
 // https://www.lawinsider.com/contracts/gqMefydFFWn
 // sheet line 21
 
-// TODO
-
 contract StockPurchaseAgreement {
 
-    address payable[] public seller;
+    address payable public seller;
     address payable[] public buyer;
 
-    string[] public sellerName;
+    string public sellerName;
     string[] public buyerName;
 
     uint public EffectiveTime;
@@ -43,17 +41,15 @@ contract StockPurchaseAgreement {
     event Terminated_OutOfDate();
 
     constructor() public payable {
-        EffectiveTime = 0;
+        EffectiveTime = 1598457600; // August 27, 2020
         CloseTime = 0;
         OutSideClosingDate = 0;
 
-        sellerName = ["China Hospitals"];
-        seller = [address(0)];
+        sellerName = "";
+        seller = address(0);
 
         buyerName = ["1847 Cabinets Inc."];
         buyer = [address(0)];
-
-        // price = [5000000];
     }
 
     function pay_0()
@@ -65,7 +61,7 @@ contract StockPurchaseAgreement {
 
         require(now <= CloseTime);
 
-        uint256 price = 0;
+        uint256 price = 6650000; // 6650000 USD
         require(msg.value == price);
 
         emit Payed_0();
@@ -73,25 +69,6 @@ contract StockPurchaseAgreement {
         pricePayedByBuyer[0] = price; 
 
         state[0] = State.Locked;
-    }
-
-    function purchaseConfirmMultiSeller(uint32 sellerIndex) 
-        public
-    {
-        require(sellerIndex < seller.length);
-
-        if (msg.sender == seller[0]) {
-            purchaseBuyerConfirmed[sellerIndex] = true;
-            return;
-        }
-
-        uint sellerNum = sellerName.length;
-        for (uint i=0; i<sellerNum; i++) {
-            if (msg.sender == seller[i]) {
-                purchaseSellerConfirmed[i] = true;
-                return;
-            }
-        }        
     }
 
     /// Release pay by the buyer
@@ -103,14 +80,11 @@ contract StockPurchaseAgreement {
 
         require(now <= CloseTime);
 
-        require(purchaseBuyerConfirmed[0]);
-        require(purchaseSellerConfirmed[0]);
-
         emit Released_0();
 
         state[0] = State.Release;
 
-        seller[0].transfer(pricePayedByBuyer[0]);
+        seller.transfer(pricePayedByBuyer[0]);
 
         // clean the contract account
         pricePayedByBuyer[0] = 0;
@@ -121,7 +95,7 @@ contract StockPurchaseAgreement {
         public
     {
         bool validSender = false;
-        if (msg.sender == seller[0]) {
+        if (msg.sender == seller) {
             validSender = true;
         } else {
             uint buyerNum = buyerName.length;
@@ -137,48 +111,41 @@ contract StockPurchaseAgreement {
         fileHashMap[fileName] = hashCode;
     }
 
-    function terminateConfirm(uint32 sellerIndex)
+    function terminateConfirm(uint32 buyerIndex)
         public
     {
-        require(sellerIndex < seller.length);
+        require(buyerIndex < buyer.length);
 
-        if (msg.sender == seller[0]) {
-            terminateBuyerConfirmed[sellerIndex] = true;
+        if (msg.sender == seller) {
+            terminateSellerConfirmed[buyerIndex] = true;
             return;
         }
 
-        uint sellerNum = sellerName.length;
-        for (uint i=0; i<sellerNum; i++) {
-            if (msg.sender == seller[i]) {
-                terminateSellerConfirmed[i] = true;
+        uint buyerNum = buyerName.length;
+        for (uint i=0; i<buyerNum; i++) {
+            if (msg.sender == buyer[i]) {
+                terminateBuyerConfirmed[i] = true;
                 return;
             }
-        }  
+        }
     }
 
     function terminateByTransfer(uint buyerIndex)
         public
     {
         bool validSender = false;
-
-        uint sellerNum = sellerName.length;
-        for (uint i=0; i<sellerNum; i++) {
-            if (msg.sender == seller[i]) {
-                validSender = true;
-                buyerIndex = i;
-                break;
+        if (msg.sender == seller) {
+            validSender = true;
+        } else {
+            uint buyerNum = buyerName.length;
+            for (uint i=0; i<buyerNum; i++) {
+                if (msg.sender == buyer[i]) {
+                    validSender = true;
+                    buyerIndex = i;
+                    break;
+                }
             }
         }
-
-        uint buyerNum = buyerName.length;
-        for (uint i=0; i<buyerNum; i++) {
-            if (msg.sender == buyer[i]) {
-                validSender = true;
-                buyerIndex = i;
-                break;
-            }
-        }
-
         require(validSender);
 
         require(now < CloseTime);
@@ -193,23 +160,6 @@ contract StockPurchaseAgreement {
         // refund
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
 
-        // selfdestruct(seller);
-    }
-
-    function terminateByOutOfDate()
-        public
-    {
-        require(now >= OutSideClosingDate);
-
-        emit Terminated_OutOfDate();
-
-        uint buyerNum = buyerName.length;
-
-        for (uint i=0; i<buyerNum; i++) {
-            state[i] = State.Inactive;
-            // refund
-            buyer[i].transfer(pricePayedByBuyer[i]);
-        }
         // selfdestruct(seller);
     }
 

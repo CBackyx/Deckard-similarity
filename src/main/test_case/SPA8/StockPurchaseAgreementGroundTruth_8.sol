@@ -59,6 +59,8 @@ contract StockPurchaseAgreement {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
 
+        require(now <= CloseTime);
+
         uint256 price = 35000; // 35000 USD
         require(msg.value == price);
 
@@ -75,6 +77,8 @@ contract StockPurchaseAgreement {
         public
     {
         require(msg.sender == buyer[0]);
+
+        require(now <= CloseTime);
 
         emit Released_0();
 

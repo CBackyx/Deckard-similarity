@@ -25,14 +25,14 @@
                 "rightOp": "CloseTime",
                 "disabled": false
             },
-            "PurchasePrice": 0,
-            "Transfer": true
+            "PurchasePrice": 0.0001,
+            "Transfer": false
         }
     ],
     "Transfers": true,
     "Terminations": {
         "TransferTermination": false,
         "OutOfDateTermination": false,
-        "OtherTermination": true
+        "OtherTermination": false
     }
 }

@@ -1,23 +1,19 @@
 {
     "ContractCategory": "StockPurchaseAgreement",
     "SellerName": [
-        "TEGO CYBER INC."
+        "G Medical Innovations Holdings Ltd."
     ],
-    "BuyerName": [
-        "TEGO CYBER INC."
-    ],
+    "BuyerName": [],
     "EffectiveTime": [
-        "April 28, 2021,"
+        "April 7, 2021,"
     ],
     "CloseTime": [],
     "OutSideClosingDate": [],
     "Payments": [
         {
-            "From": [
-                "TEGO CYBER INC."
-            ],
+            "From": [],
             "To": [
-                "TEGO CYBER INC."
+                "G Medical Innovations Holdings Ltd."
             ],
             "TimeLimit": {
                 "operator": "<=",
@@ -25,13 +21,13 @@
                 "rightOp": "CloseTime",
                 "disabled": false
             },
-            "PurchasePrice": 33507.5,
+            "PurchasePrice": 10000000,
             "Transfer": true
         }
     ],
     "Transfers": true,
     "Terminations": {
-        "TransferTermination": false,
+        "TransferTermination": true,
         "OutOfDateTermination": false,
         "OtherTermination": true
     }

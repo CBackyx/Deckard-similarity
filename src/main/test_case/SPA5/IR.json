@@ -17,14 +17,14 @@
                 "rightOp": "CloseTime",
                 "disabled": false
             },
-            "PurchasePrice": 37100,
+            "PurchasePrice": 60639067.55,
             "Transfer": true
         }
     ],
     "Transfers": true,
     "Terminations": {
-        "TransferTermination": false,
+        "TransferTermination": true,
         "OutOfDateTermination": false,
-        "OtherTermination": true
+        "OtherTermination": false
     }
 }

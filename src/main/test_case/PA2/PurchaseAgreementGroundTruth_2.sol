@@ -41,7 +41,7 @@ contract PurchaseAgreement {
     event Terminated_OutOfDate();
 
     constructor() public payable {
-        EffectiveTime = 0; // May 19, 2020
+        EffectiveTime = 1589817600; // May 19, 2020
         CloseTime = 0;
         OutSideClosingDate = 0;
 
@@ -59,7 +59,7 @@ contract PurchaseAgreement {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
 
-        require(now == CloseTime);
+        require(now <= CloseTime);
 
         uint256 price = 1290803105; // 1,290,803,105 USD
         require(msg.value == price);
@@ -97,7 +97,7 @@ contract PurchaseAgreement {
     {
         require(msg.sender == buyer[0]);
 
-        require(now == CloseTime);
+        require(now <= CloseTime);
 
         require(purchaseBuyerConfirmed[0]);
         require(purchaseSellerConfirmed[0]);

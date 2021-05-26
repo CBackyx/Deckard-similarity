@@ -24,8 +24,8 @@ contract StockPurchaseAgreementTemplate {
     event Closed();
     constructor() public payable {
         EffectiveTime = 1358265600;
-        CloseTime = 946656000;
-        OutSideClosingDate = 946656000;
+        CloseTime = 0;
+        OutSideClosingDate = 0;
         sellerName = "NISSAN MOTOR ACCEPTANCE CORPORATION";
         seller = address(0);
         buyerName =["NISSAN AUTO RECEIVABLES CORPORATION II"];
@@ -35,32 +35,15 @@ contract StockPurchaseAgreementTemplate {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
         require(now <= CloseTime);
-        uint256 price = 1427665100.36;
+        uint256 price = 1427665100;
         require(msg.value == price);
         emit Payed(0);
         pricePayedByBuyer[0] += price;
         state[0] = State.Locked;
     }
-    function purchaseConfirm(uint32 buyerIndex) public {
-        require(buyerIndex < buyer.length);
-        if(msg.sender == seller) {
-            purchaseSellerConfirmed[buyerIndex] = true;
-        }
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            if(msg.sender == buyer[i]) {
-                purchaseBuyerConfirmed[i] = true;
-                break;
-            }
-        }
-    }
     function payRelease_0() public {
         require(msg.sender == buyer[0]);
         require(now <= CloseTime);
-        require(purchaseBuyerConfirmed[0]);
-        require(purchaseSellerConfirmed[0]);
         emit Released(0);
         state[0] = State.Release;
         seller.transfer(pricePayedByBuyer[0]);
@@ -84,33 +67,6 @@ contract StockPurchaseAgreementTemplate {
         }
         require(validSender);
         fileHashMap[fileName] = hashCode;
-    }
-    function terminateConfirm(uint32 buyerIndex) public {
-        require(buyerIndex < buyer.length);
-        if(msg.sender == seller) {
-            terminateSellerConfirmed[buyerIndex] = true;
-            return;
-        }
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            if(msg.sender == buyer[i]) {
-                terminateBuyerConfirmed[i] = true;
-                return;
-            }
-        }
-    }
-    function terminateByOutOfDate() public {
-        require(now >= OutSideClosingDate);
-        emit Terminated_OutOfDate();
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            state[i] = State.Inactive;
-            buyer[i].transfer(pricePayedByBuyer[i]);
-        }
     }
     function close() public {
         require(now >= CloseTime);

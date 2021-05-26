@@ -1,138 +1,138 @@
 PA0
 
-Vec cosine 0.9968245144936155
-Difference 1-norm 580.0
-Difference 2-norm 171.40011668607463
+Vec cosine 0.9966252581527892
+Difference 1-norm 521.0
+Difference 2-norm 157.24821143656928
 
 PA1
 
-Vec cosine 0.9999107378405955
-Difference 1-norm 67.0
-Difference 2-norm 19.82422760159901
+Vec cosine 0.9999274612259195
+Difference 1-norm 33.0
+Difference 2-norm 7.810249675906654
 
 PA2
 
-Vec cosine 0.9991982955248485
-Difference 1-norm 353.0
-Difference 2-norm 103.9759587597056
+Vec cosine 0.9998306707514827
+Difference 1-norm 33.0
+Difference 2-norm 7.810249675906654
 
 PA3
 
-Vec cosine 0.9955237367766026
-Difference 1-norm 616.0
-Difference 2-norm 185.77943912069495
+Vec cosine 0.9998264675666761
+Difference 1-norm 26.0
+Difference 2-norm 7.0710678118654755
 
 PA4
 
-Vec cosine 0.9997182190495347
-Difference 1-norm 131.0
-Difference 2-norm 34.741905532080416
+Vec cosine 0.9952219814554993
+Difference 1-norm 479.0
+Difference 2-norm 149.19450392021818
 
 PA4
 
-Vec cosine 0.9997182190495347
-Difference 1-norm 131.0
-Difference 2-norm 34.741905532080416
+Vec cosine 0.9952219814554993
+Difference 1-norm 479.0
+Difference 2-norm 149.19450392021818
 
 PA5
 
-Vec cosine 0.9997987313556825
-Difference 1-norm 213.0
-Difference 2-norm 61.08191221630181
+Vec cosine 0.9999411725947488
+Difference 1-norm 31.0
+Difference 2-norm 7.681145747868608
 
 SPA0
 
-Vec cosine 0.9973056177157777
-Difference 1-norm 431.0
-Difference 2-norm 131.53326575433303
+Vec cosine 0.9998264675666761
+Difference 1-norm 26.0
+Difference 2-norm 7.0710678118654755
 
 SPA1
 
-Vec cosine 0.9995476938853316
-Difference 1-norm 323.0
-Difference 2-norm 89.28045698807774
+Vec cosine 0.9997205286052249
+Difference 1-norm 233.0
+Difference 2-norm 60.753600716336145
 
 SPA2
 
-Vec cosine 0.9973056177157777
-Difference 1-norm 431.0
-Difference 2-norm 131.53326575433303
+Vec cosine 0.9998264675666761
+Difference 1-norm 26.0
+Difference 2-norm 7.0710678118654755
 
 SPA3
 
-Vec cosine 0.9999130743431528
-Difference 1-norm 37.0
-Difference 2-norm 8.306623862918075
+Vec cosine 0.9999274612259195
+Difference 1-norm 33.0
+Difference 2-norm 7.810249675906654
 
 SPA4
 
-Vec cosine 0.9991799235099394
-Difference 1-norm 425.0
-Difference 2-norm 127.33027919548437
+Vec cosine 0.9999205300066594
+Difference 1-norm 26.0
+Difference 2-norm 7.0710678118654755
 
 SPA5
 
-Vec cosine 0.998646214126022
-Difference 1-norm 176.0
-Difference 2-norm 46.26013402488151
+Vec cosine 0.9999140964040799
+Difference 1-norm 33.0
+Difference 2-norm 7.810249675906654
 
 SPA6
 
-Vec cosine 0.9996744144092437
-Difference 1-norm 174.0
-Difference 2-norm 50.75431016179808
+Vec cosine 0.9987256152179014
+Difference 1-norm 211.0
+Difference 2-norm 62.984124983998946
 
 SPA7
 
-Vec cosine 0.9992221717832914
-Difference 1-norm 142.0
-Difference 2-norm 37.603191353926334
+Vec cosine 0.999942551701636
+Difference 1-norm 24.0
+Difference 2-norm 6.928203230275509
 
 SPA8
 
-Vec cosine 0.997125940437636
-Difference 1-norm 429.0
-Difference 2-norm 132.23842104320514
+Vec cosine 0.9998724911992106
+Difference 1-norm 24.0
+Difference 2-norm 6.928203230275509
 
 SPA9
 
-Vec cosine 0.9972176556365566
-Difference 1-norm 373.0
-Difference 2-norm 110.71133636624572
+Vec cosine 0.9998306707514827
+Difference 1-norm 33.0
+Difference 2-norm 7.810249675906654
 
 SECPA0
 
-Vec cosine 0.9968934625770165
-Difference 1-norm 703.0
-Difference 2-norm 217.45114393812693
+Vec cosine 0.9998306707514827
+Difference 1-norm 33.0
+Difference 2-norm 7.810249675906654
 
 SECPA1
 
-Vec cosine 0.9994601020566677
-Difference 1-norm 212.0
-Difference 2-norm 64.35837163881635
+Vec cosine 0.9998306707514827
+Difference 1-norm 33.0
+Difference 2-norm 7.810249675906654
 
 SECPA2
 
-Vec cosine 0.9994391647684293
-Difference 1-norm 212.0
-Difference 2-norm 64.32728814430156
+Vec cosine 0.9998306707514827
+Difference 1-norm 33.0
+Difference 2-norm 7.810249675906654
 
 SECPA3
 
-Vec cosine 0.9984273388289864
-Difference 1-norm 349.0
-Difference 2-norm 104.62791214585141
+Vec cosine 0.9999140964040799
+Difference 1-norm 33.0
+Difference 2-norm 7.810249675906654
 
 SA0
 
-Vec cosine 0.9955785508316641
-Difference 1-norm 616.0
-Difference 2-norm 185.81173267584586
+Vec cosine 0.9998264675666761
+Difference 1-norm 26.0
+Difference 2-norm 7.0710678118654755
 
 SA1
 
-Vec cosine 0.9973056177157777
-Difference 1-norm 431.0
-Difference 2-norm 131.53326575433303
+Vec cosine 0.9998264675666761
+Difference 1-norm 26.0
+Difference 2-norm 7.0710678118654755
 

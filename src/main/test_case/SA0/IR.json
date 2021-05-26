@@ -7,12 +7,10 @@
         "Adial Pharmaceuticals"
     ],
     "EffectiveTime": [
-        "June 6, 2018"
+        "June 6, 2018,"
     ],
     "CloseTime": [],
-    "OutSideClosingDate": [
-        ""
-    ],
+    "OutSideClosingDate": [],
     "Payments": [
         {
             "From": [
@@ -28,13 +26,13 @@
                 "disabled": false
             },
             "PurchasePrice": 325000,
-            "Transfer": true
+            "Transfer": false
         }
     ],
     "Transfers": true,
     "Terminations": {
-        "TransferTermination": true,
+        "TransferTermination": false,
         "OutOfDateTermination": false,
-        "OtherTermination": true
+        "OtherTermination": false
     }
 }

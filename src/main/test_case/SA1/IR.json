@@ -7,12 +7,10 @@
         "INTELLIGENT LIVING INC."
     ],
     "EffectiveTime": [
-        "April 25, 2014"
+        "April 25, 2014,"
     ],
     "CloseTime": [],
-    "OutSideClosingDate": [
-        ""
-    ],
+    "OutSideClosingDate": [],
     "Payments": [
         {
             "From": [
@@ -28,7 +26,7 @@
                 "disabled": false
             },
             "PurchasePrice": 300000,
-            "Transfer": true
+            "Transfer": false
         }
     ],
     "Transfers": true,

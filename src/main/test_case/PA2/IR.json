@@ -4,7 +4,7 @@
         "VW Credit"
     ],
     "BuyerName": [
-        "Volkswagen Auto Lease/Loan Underwritten Funding"
+        "VOLKSWAGEN AUTO LEASE/LOAN UNDERWRITTEN FUNDING"
     ],
     "EffectiveTime": [
         "May\u00a019, 2020"
@@ -14,7 +14,7 @@
     "Payments": [
         {
             "From": [
-                "Volkswagen Auto Lease/Loan Underwritten Funding"
+                "VOLKSWAGEN AUTO LEASE/LOAN UNDERWRITTEN FUNDING"
             ],
             "To": [
                 "VW Credit"
@@ -31,7 +31,7 @@
     ],
     "Transfers": true,
     "Terminations": {
-        "TransferTermination": true,
+        "TransferTermination": false,
         "OutOfDateTermination": false,
         "OtherTermination": true
     }

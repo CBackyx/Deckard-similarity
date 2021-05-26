@@ -25,6 +25,6 @@
     "Terminations": {
         "TransferTermination": false,
         "OutOfDateTermination": false,
-        "OtherTermination": true
+        "OtherTermination": false
     }
 }

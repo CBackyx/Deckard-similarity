@@ -41,9 +41,9 @@ contract StockPurchaseAgreement {
     event Terminated_OutOfDate();
 
     constructor() public payable {
-        EffectiveTime = 0; // March 29, 2021
+        EffectiveTime = 1616947200; // March 29, 2021
         CloseTime = 0;
-        OutSideClosingDate = 0; // March 31, 2021
+        OutSideClosingDate = 1617120000; // March 31, 2021
 
         sellerName = "BIOCARDIA, INC.";
         seller = address(0);
@@ -59,7 +59,7 @@ contract StockPurchaseAgreement {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
 
-        require(now == CloseTime);
+        require(now <= CloseTime);
 
         uint256 price = 2000000; // 2000000 USB
         require(msg.value == price);
@@ -97,7 +97,7 @@ contract StockPurchaseAgreement {
     {
         require(msg.sender == buyer[0]);
 
-        require(now == CloseTime);
+        require(now <= CloseTime);
 
         require(purchaseBuyerConfirmed[0]);
         require(purchaseSellerConfirmed[0]);

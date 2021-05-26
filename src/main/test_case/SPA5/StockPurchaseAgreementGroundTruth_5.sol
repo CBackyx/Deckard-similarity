@@ -41,7 +41,7 @@ contract StockPurchaseAgreement {
     event Terminated_OutOfDate();
 
     constructor() public payable {
-        EffectiveTime = 0; // July 29, 2011
+        EffectiveTime = 1311868800; // July 29, 2011
         CloseTime = 0;
         OutSideClosingDate = 0;
 
@@ -59,6 +59,8 @@ contract StockPurchaseAgreement {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
 
+        require(now <= CloseTime);
+
         uint256 price = 37100; // $37,100 USD
         require(msg.value == price);
 
@@ -69,12 +71,36 @@ contract StockPurchaseAgreement {
         state[0] = State.Locked;
     }
 
+    function purchaseConfirm(uint32 buyerIndex) 
+        public
+    {
+        require(buyerIndex < buyer.length);
+
+        if (msg.sender == seller) {
+            purchaseSellerConfirmed[buyerIndex] = true;
+            return;
+        }
+
+        uint buyerNum = buyerName.length;
+        for (uint i=0; i<buyerNum; i++) {
+            if (msg.sender == buyer[i]) {
+                purchaseBuyerConfirmed[i] = true;
+                return;
+            }
+        }        
+    }
+
     /// Release pay by the buyer
     /// This will release the locked ether.
     function payRelease_0()
         public
     {
         require(msg.sender == buyer[0]);
+
+        require(now <= CloseTime);
+
+        require(purchaseBuyerConfirmed[0]);
+        require(purchaseSellerConfirmed[0]);
 
         emit Released_0();
 

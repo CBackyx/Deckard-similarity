@@ -24,10 +24,12 @@ contract StockPurchaseAgreementTemplate {
     event Closed();
     constructor() public payable {
         EffectiveTime = NaN;
-        CloseTime = 946656000;
+        CloseTime = 0;
         OutSideClosingDate = 1370016000;
         sellerName = "RANGE OPERATING NEW MEXICO";
         seller = address(0);
+        buyerName =[""];
+        buyer =[address(0)];
     }
     function pay_0() public payable {
         require(state[0] == State.Created || state[0] == State.Locked);

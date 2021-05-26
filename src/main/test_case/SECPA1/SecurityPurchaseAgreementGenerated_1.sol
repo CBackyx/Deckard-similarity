@@ -24,8 +24,8 @@ contract StockPurchaseAgreementTemplate {
     event Closed();
     constructor() public payable {
         EffectiveTime = 1620057600;
-        CloseTime = 946656000;
-        OutSideClosingDate = 946656000;
+        CloseTime = 0;
+        OutSideClosingDate = 0;
         sellerName = "GOOD HEMP INC.";
         seller = address(0);
         buyerName =["METROSPACES"];
@@ -84,17 +84,6 @@ contract StockPurchaseAgreementTemplate {
         }
         require(validSender);
         fileHashMap[fileName] = hashCode;
-    }
-    function terminateByOutOfDate() public {
-        require(now >= OutSideClosingDate);
-        emit Terminated_OutOfDate();
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            state[i] = State.Inactive;
-            buyer[i].transfer(pricePayedByBuyer[i]);
-        }
     }
     function close() public {
         require(now >= CloseTime);

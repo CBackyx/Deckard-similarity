@@ -7,12 +7,10 @@
         "The Quercus Trust"
     ],
     "EffectiveTime": [
-        "October 4, 2011"
+        "October 4, 2011,"
     ],
     "CloseTime": [],
-    "OutSideClosingDate": [
-        ""
-    ],
+    "OutSideClosingDate": [],
     "Payments": [
         {
             "From": [
@@ -28,7 +26,7 @@
                 "disabled": false
             },
             "PurchasePrice": 100000,
-            "Transfer": true
+            "Transfer": false
         }
     ],
     "Transfers": true,

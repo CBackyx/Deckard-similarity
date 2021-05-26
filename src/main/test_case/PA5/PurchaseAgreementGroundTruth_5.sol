@@ -43,7 +43,7 @@ contract PurchaseAgreement {
     constructor() public payable {
         EffectiveTime = 0; // 26th day of February 2013
         CloseTime = 0;
-        OutSideClosingDate = 0; // June 1, 2013
+        OutSideClosingDate = 1370016000; // June 1, 2013
 
         sellerName = ""; // RANGE TEXAS PRODUCTION, LLC and RANGE OPERATING NEW MEXICO, LLC
         seller = address(0);
@@ -59,7 +59,7 @@ contract PurchaseAgreement {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
 
-        require(now == CloseTime);
+        require(now <= CloseTime);
 
         uint256 price = 275000000; // 275000000 USD
         require(msg.value == price);
@@ -71,6 +71,25 @@ contract PurchaseAgreement {
         state[0] = State.Locked;
     }
 
+    function purchaseConfirm(uint32 buyerIndex) 
+        public
+    {
+        require(buyerIndex < buyer.length);
+
+        if (msg.sender == seller) {
+            purchaseSellerConfirmed[buyerIndex] = true;
+            return;
+        }
+
+        uint buyerNum = buyerName.length;
+        for (uint i=0; i<buyerNum; i++) {
+            if (msg.sender == buyer[i]) {
+                purchaseBuyerConfirmed[i] = true;
+                return;
+            }
+        }        
+    }
+
     /// Release pay by the buyer
     /// This will release the locked ether.
     function payRelease_0()
@@ -78,7 +97,10 @@ contract PurchaseAgreement {
     {
         require(msg.sender == buyer[0]);
 
-        require(now == CloseTime);
+        require(now <= CloseTime);
+
+        require(purchaseBuyerConfirmed[0]);
+        require(purchaseSellerConfirmed[0]);
 
         emit Released_0();
 

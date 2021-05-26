@@ -41,7 +41,7 @@ contract SecurityPurchaseAgreement {
     event Terminated_OutOfDate();
 
     constructor() public payable {
-        EffectiveTime = 0; // April 28, 2021
+        EffectiveTime = 1619539200; // April 28, 2021
         CloseTime = 0;
         OutSideClosingDate = 0;
 
@@ -58,6 +58,8 @@ contract SecurityPurchaseAgreement {
     {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
+
+        require(now <= CloseTime);
 
         uint256 price = 33507; // 33507 USD
         require(msg.value == price);
@@ -94,6 +96,8 @@ contract SecurityPurchaseAgreement {
         public
     {
         require(msg.sender == buyer[0]);
+
+        require(now <= CloseTime);
 
         require(purchaseBuyerConfirmed[0]);
         require(purchaseSellerConfirmed[0]);

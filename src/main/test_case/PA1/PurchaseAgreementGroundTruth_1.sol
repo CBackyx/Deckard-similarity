@@ -41,9 +41,9 @@ contract PurchaseAgreement {
     event Terminated_OutOfDate();
 
     constructor() public payable {
-        EffectiveTime = 0; // April 26, 2021
+        EffectiveTime = 1619366400; // April 26, 2021
         CloseTime = 0;
-        OutSideClosingDate = 0; // July 31, 2021
+        OutSideClosingDate = 1627660800; // July 31, 2021
 
         sellerName = "BROOKLYN IMMUNOTHERAPEUTICS, INC.";
         seller = address(0);
@@ -58,6 +58,8 @@ contract PurchaseAgreement {
     {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
+
+        require(now <= CloseTime);
 
         uint256 price = 20000000; // 20000000 USD
         require(msg.value == price);
@@ -94,6 +96,8 @@ contract PurchaseAgreement {
         public
     {
         require(msg.sender == buyer[0]);
+
+        require(now <= CloseTime);
 
         require(purchaseBuyerConfirmed[0]);
         require(purchaseSellerConfirmed[0]);

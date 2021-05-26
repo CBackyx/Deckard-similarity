@@ -24,7 +24,7 @@ contract StockPurchaseAgreementTemplate {
     event Closed();
     constructor() public payable {
         EffectiveTime = 1616947200;
-        CloseTime = 946656000;
+        CloseTime = 0;
         OutSideClosingDate = 1617120000;
         sellerName = "BIOCARDIA";
         seller = address(0);

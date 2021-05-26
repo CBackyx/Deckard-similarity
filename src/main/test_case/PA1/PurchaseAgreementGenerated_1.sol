@@ -24,7 +24,7 @@ contract StockPurchaseAgreementTemplate {
     event Closed();
     constructor() public payable {
         EffectiveTime = 1619366400;
-        CloseTime = 946656000;
+        CloseTime = 0;
         OutSideClosingDate = 1627660800;
         sellerName = "BROOKLYN IMMUNOTHERAPEUTICS";
         seller = address(0);

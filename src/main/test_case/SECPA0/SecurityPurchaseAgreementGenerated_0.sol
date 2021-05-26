@@ -24,8 +24,8 @@ contract StockPurchaseAgreementTemplate {
     event Closed();
     constructor() public payable {
         EffectiveTime = 1617206400;
-        CloseTime = 946656000;
-        OutSideClosingDate = -1167609600;
+        CloseTime = 0;
+        OutSideClosingDate = 0;
         sellerName = "FUTURIS COMPANY";
         seller = address(0);
         buyerName =["AJB CAPITAL INVESTMENTS"];
@@ -84,58 +84,6 @@ contract StockPurchaseAgreementTemplate {
         }
         require(validSender);
         fileHashMap[fileName] = hashCode;
-    }
-    function terminateConfirm(uint32 buyerIndex) public {
-        require(buyerIndex < buyer.length);
-        if(msg.sender == seller) {
-            terminateSellerConfirmed[buyerIndex] = true;
-            return;
-        }
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            if(msg.sender == buyer[i]) {
-                terminateBuyerConfirmed[i] = true;
-                return;
-            }
-        }
-    }
-    function terminateByTransfer(uint buyerIndex) public {
-        bool validSender = false;
-        if(msg.sender == seller) {
-            validSender = true;
-        }
-        else {
-            uint buyerNum = buyerName.length;
-            for(uint i = 0;
-            i < buyerNum;
-            i ++) {
-                if(msg.sender == buyer[i]) {
-                    validSender = true;
-                    buyerIndex = i;
-                    break;
-                }
-            }
-        }
-        require(validSender);
-        require(now < CloseTime);
-        require(terminateSellerConfirmed[buyerIndex]);
-        require(terminateBuyerConfirmed[buyerIndex]);
-        emit Terminated(buyerIndex);
-        state[buyerIndex] = State.Inactive;
-        buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
-    }
-    function terminateByOutOfDate() public {
-        require(now >= OutSideClosingDate);
-        emit Terminated_OutOfDate();
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            state[i] = State.Inactive;
-            buyer[i].transfer(pricePayedByBuyer[i]);
-        }
     }
     function close() public {
         require(now >= CloseTime);

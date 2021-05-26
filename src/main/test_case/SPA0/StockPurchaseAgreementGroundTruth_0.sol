@@ -41,7 +41,7 @@ contract StockPurchaseAgreement {
     event Terminated_OutOfDate();
 
     constructor() public payable {
-        EffectiveTime = 0; // October 4, 2011
+        EffectiveTime = 1317657600; // October 4, 2011
         CloseTime = 0;
         OutSideClosingDate = 0;
 
@@ -59,6 +59,8 @@ contract StockPurchaseAgreement {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
 
+        require(now <= CloseTime);
+
         uint256 price = 100000; // 100000 USD
         require(msg.value == price);
 
@@ -75,6 +77,8 @@ contract StockPurchaseAgreement {
         public
     {
         require(msg.sender == buyer[0]);
+
+        require(now <= CloseTime);
 
         emit Released_0();
 
