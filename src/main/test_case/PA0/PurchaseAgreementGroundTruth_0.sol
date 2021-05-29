@@ -30,15 +30,13 @@ contract PurchaseAgreement {
     // The state variable has a default value of the first member, `State.created`
     State[1] public state;
 
-    bool transferReceiveConfirm; 
-
-    event Payed_0();
-    event Released_0();
-    event Closed();
+    event Payed(uint paymentIndex);
+    event Released(uint paymentIndex);
     event Terminated(
         uint buyerIndex
     );
     event Terminated_OutOfDate();
+    event Closed();
 
     constructor() public payable {
         EffectiveTime = 1430409600; // May 1, 2015
@@ -65,7 +63,7 @@ contract PurchaseAgreement {
         uint256 price = 1829526188; // 1,829,526,188 USD
         require(msg.value == price);
 
-        emit Payed_0();
+        emit Payed(0);
 
         pricePayedByBuyer[0] = price; 
 
@@ -81,7 +79,7 @@ contract PurchaseAgreement {
 
         require(now <= CloseTime);
 
-        emit Released_0();
+        emit Released(0);
 
         state[0] = State.Release;
 

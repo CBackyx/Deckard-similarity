@@ -16,7 +16,6 @@ contract StockPurchaseAgreementTemplate {
     enum State {
         Created, Locked, Release, Transfered, Inactive }
     State[1] public state;
-    bool transferReceiveConfirm;
     event Payed(uint paymentIndex);
     event Released(uint paymentIndex);
     event Terminated(uint buyerIndex);
