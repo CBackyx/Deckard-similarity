@@ -39,7 +39,7 @@ contract StockPurchaseAgreement {
     event Closed();
 
     constructor() public payable {
-        EffectiveTime = 0; // 2nd day of November 2009
+        EffectiveTime = 1257091200; // 2nd day of November 2009
         CloseTime = 0;
         OutSideClosingDate = 0;
 

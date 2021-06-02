@@ -44,6 +44,7 @@ contract StockPurchaseAgreement {
         require(buyerIndex < buyer.length);
         if(msg.sender == seller) {
             purchaseSellerConfirmed[buyerIndex] = true;
+            return;
         }
         uint buyerNum = buyerName.length;
         for(uint i = 0;
@@ -51,7 +52,7 @@ contract StockPurchaseAgreement {
         i ++) {
             if(msg.sender == buyer[i]) {
                 purchaseBuyerConfirmed[i] = true;
-                break;
+                return;
             }
         }
     }
