@@ -64,7 +64,7 @@ contract PurchaseAgreement {
 
         emit Payed(0);
 
-        pricePayedByBuyer[0] = price; 
+        pricePayedByBuyer[0] += price; 
 
         state[0] = State.Locked;
     }

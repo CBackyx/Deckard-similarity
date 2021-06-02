@@ -1,5 +1,5 @@
 pragma solidity 0.5.16;
-contract StockPurchaseAgreementTemplate {
+contract SecurityPurchaseAgreement {
     address payable public seller;
     address payable[] public buyer;
     string public sellerName;
