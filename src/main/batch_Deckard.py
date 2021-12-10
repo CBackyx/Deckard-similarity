@@ -2,29 +2,34 @@ import subprocess
 import sys
 import os
 
-# testcase_Dirs = [[], # PA
-#                 ["0", "1", "2", "3", "4", "5", "6"], # SPA
-#                 ["0", "1"], # SECPA
-#                 ["0", "1"]]; # SA
+contract_path = "./test_case"
+contract_rela_path = "test_case"
 
-testcase_Dirs = [["0", "1", "2", "3", "4", "5"], # PA
-                ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], # SPA
-                ["0", "1", "2", "3"], # SECPA
-                ["0", "1"]] # SA
+for folder in os.listdir(contract_path):
 
-groundTruthNamePatterns = ["PurchaseAgreementGroundTruth_", "StockPurchaseAgreementGroundTruth_", "SecurityPurchaseAgreementGroundTruth_", "SecurityAgreementGroundTruth_"]
-generatedNamePatterns = ["PurchaseAgreementGenerated_", "StockPurchaseAgreementGenerated_", "SecurityPurchaseAgreementGenerated_", "SecurityAgreementGenerated_"]
-dirNamePatterns = ["PA", "SPA", "SECPA", "SA"]
+    if folder == "selected":
+        continue
 
+    cur_path = contract_path + "/" + folder
+    cur_rela_path = contract_rela_path + "/" + folder
 
-for i in range(len(dirNamePatterns)):
-    for j in range(len(testcase_Dirs[i])):
+    if not os.path.isdir(cur_path):
+        continue
+
+    for x in os.listdir(cur_path):
+        # print(x)
+        c_path = cur_path + "/" + x  
+        c_rela_path = cur_rela_path + "/" + x  
         
         cmd = ['python3', 
                 "calSolVecSimilarity.py",
-                "test_case/" + dirNamePatterns[i] + testcase_Dirs[i][j] + "/" + groundTruthNamePatterns[i] + testcase_Dirs[i][j] + ".sol",
-                "test_case/" + dirNamePatterns[i] + testcase_Dirs[i][j] + "/" + generatedNamePatterns[i] + testcase_Dirs[i][j] + ".sol"] 
+                c_rela_path + "/ground_truth.sol",
+                c_rela_path + "/synthesized.sol"
+                ]
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
         process.wait()
-        print(dirNamePatterns[i] + testcase_Dirs[i][j])
+        print(c_path)
+        # print(dirNamePatterns[i] + testcase_Dirs[i][j])
         print(process.stdout.read().decode('utf-8'))
+
+# python batch_Deckard.py > test_case/batch_similarity.txt

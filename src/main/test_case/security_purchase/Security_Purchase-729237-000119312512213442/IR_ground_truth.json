@@ -1,0 +1,41 @@
+{
+    "ContractCategory": "SecurityPurchaseAgreement",
+    "SellerName": [
+        "Parkway Properties, Inc."
+    ],
+    "BuyerName": [
+        ""
+    ],
+    "EffectiveTime": [
+        "1000"
+    ],
+    "CloseTime": [
+        "1000"
+    ],
+    "OutSideClosingDate": [
+        "1000"
+    ],
+    "Payments": [
+        {
+            "From": [
+                ""
+            ],
+            "To": [
+                "Parkway Properties, Inc."
+            ],
+            "PurchasePrice": "151625002",
+            "TimeLimit": {
+                "leftOp": "now",
+                "operator": "<=",
+                "rightOp": "CloseTime"
+            },
+            "Transfer": true
+        }
+    ],
+    "Transfers": true,
+    "Terminations": {
+        "OtherTermination": true,
+        "OutOfDateTermination": false,
+        "TransferTermination": true
+    }
+}

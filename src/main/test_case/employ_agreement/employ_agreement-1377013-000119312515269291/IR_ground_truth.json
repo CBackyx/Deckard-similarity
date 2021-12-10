@@ -1,0 +1,40 @@
+{
+    "SellerName": [
+        "William Osbourn"
+    ],
+    "BuyerName": [
+        "TIME WARNER CABLE INC."
+    ],
+    "EffectiveTime": [
+        "1000"
+    ],
+    "CloseTime": [
+        "1000"
+    ],
+    "OutSideClosingDate": [
+        "1000"
+    ],
+    "Payments": [
+        {
+            "From": [
+                "TIME WARNER CABLE INC."
+            ],
+            "To": [
+                "William Osbourn"
+            ],
+            "PurchasePrice": "495019",
+            "TimeLimit": {
+                "leftOp": "now",
+                "operator": "<=",
+                "rightOp": "CloseTime"
+            },
+            "Transfer": false
+        }
+    ],
+    "Transfers": true,
+    "Terminations": {
+        "OtherTermination": true,
+        "OutOfDateTermination": true,
+        "TransferTermination": true
+    }
+}
