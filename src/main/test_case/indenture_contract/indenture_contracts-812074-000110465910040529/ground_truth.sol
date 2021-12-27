@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined9_ground_truth {
+contract IndentureAgreement_9 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -39,7 +39,7 @@ contract undefined9_ground_truth {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 600000000;
+        uint256 price = 690000000;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);

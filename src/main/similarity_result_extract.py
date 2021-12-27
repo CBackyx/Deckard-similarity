@@ -1,6 +1,9 @@
 import numpy as np
 
-dirNamePatterns = ["PA", "SPA", "SECPA", "SA"]
+# dirNamePatterns = ["PA", "SPA", "SECPA", "SA"]
+dirNamePatterns = ["employ_agreement", "credit_contract", "indenture_contract", "Security_Purchase", 
+                    "trust_agreement", "PA", "SPA", "SECPA", "SA", 
+                    "agreement_of_plan_and_merger", "underwriting_agreement", "registration_rights", "agreements-"]
 batch_diff_result_filename = "test_case/batch_similarity.txt"
 
 output_matrix = [['Contract', 'Vec cosine', 'Difference 1-norm', 'Difference 2-norm']]

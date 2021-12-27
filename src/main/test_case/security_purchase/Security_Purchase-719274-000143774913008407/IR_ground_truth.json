@@ -7,13 +7,13 @@
         ""
     ],
     "EffectiveTime": [
-        "1000"
+        "June 27, 2013"
     ],
     "CloseTime": [
-        "1000"
+        ""
     ],
     "OutSideClosingDate": [
-        "1000"
+        ""
     ],
     "Payments": [
         {
@@ -23,7 +23,7 @@
             "To": [
                 "Giga-tronics Incorporated"
             ],
-            "PurchasePrice": "858171",
+            "PurchasePrice": "858171.08",
             "TimeLimit": {
                 "leftOp": "now",
                 "operator": "<=",

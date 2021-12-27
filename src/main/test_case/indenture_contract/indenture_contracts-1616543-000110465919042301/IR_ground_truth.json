@@ -1,7 +1,7 @@
 {
     "ContractCategory": "",
     "SellerName": [
-        "SENSEONICS HOLDINGS, INC."
+        "SENSEONICS HOLDINGS"
     ],
     "BuyerName": [
         "U.S. Bank National Association"
@@ -19,7 +19,7 @@
                 "U.S. Bank National Association"
             ],
             "To": [
-                "SENSEONICS HOLDINGS, INC."
+                "SENSEONICS HOLDINGS"
             ],
             "PurchasePrice": "82000000",
             "TimeLimit": {

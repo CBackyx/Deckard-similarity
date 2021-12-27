@@ -1,10 +1,10 @@
 {
     "ContractCategory": "",
     "SellerName": [
-        "MS Structured Asset Corp."
+        "LaSalle Bank National Association"
     ],
     "BuyerName": [
-        "LaSalle Bank National Association"
+        "MS Structured Asset Corp."
     ],
     "EffectiveTime": [
         ""
@@ -16,10 +16,10 @@
     "Payments": [
         {
             "From": [
-                "LaSalle Bank National Association"
+                "MS Structured Asset Corp."
             ],
             "To": [
-                "MS Structured Asset Corp."
+                "LaSalle Bank National Association"
             ],
             "PurchasePrice": "20000000",
             "TimeLimit": {

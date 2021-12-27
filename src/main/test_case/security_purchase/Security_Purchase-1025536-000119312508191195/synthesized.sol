@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract SecurityPurchaseAgreement6_synthesized {
+contract SecurityPurchaseAgreement_6 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,12 +25,12 @@ contract SecurityPurchaseAgreement6_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = -30610224000;
-        CloseTime = -30610224000;
-        OutSideClosingDate = -30610224000;
-        sellerName = "Taylor Capital Group, Inc.";
+        EffectiveTime = 1220457600;
+        CloseTime = 1000;
+        OutSideClosingDate = 1246291200;
+        sellerName = "Taylor Capital Group";
         seller = address(0);
-        buyerName =[""];
+        buyerName =["Buyers"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,7 +39,7 @@ contract SecurityPurchaseAgreement6_synthesized {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 1000;
+        uint256 price = 60000000;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);

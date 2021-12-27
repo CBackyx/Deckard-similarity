@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined1_ground_truth {
+contract TrustAgreement_1 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -28,9 +28,9 @@ contract undefined1_ground_truth {
         EffectiveTime = 1041350400;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "STRUCTURED ASSET SECURITIES CORPORATION";
+        sellerName = "LASALLE BANK NATIONAL ASSOCIATION";
         seller = address(0);
-        buyerName =["LASALLE BANK NATIONAL ASSOCIATION"];
+        buyerName =["STRUCTURED ASSET SECURITIES CORPORATION"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

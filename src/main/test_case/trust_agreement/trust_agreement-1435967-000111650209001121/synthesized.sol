@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined7_synthesized {
+contract TrustAgreement_8 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,12 +25,12 @@ contract undefined7_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1246204800;
+        EffectiveTime = 1000;
         CloseTime = 1000;
-        OutSideClosingDate = 1416844800;
-        sellerName = "MACROSHARES HOUSING DEPOSITOR, LLC";
+        OutSideClosingDate = 1000;
+        sellerName = "MacroShares Major Metro Housing Up Trust";
         seller = address(0);
-        buyerName =["STATE STREET BANK AND TRUST COMPANY, N.A."];
+        buyerName =["CEDE & CO."];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,7 +39,7 @@ contract undefined7_synthesized {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 0;
+        uint256 price = 20000000;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);

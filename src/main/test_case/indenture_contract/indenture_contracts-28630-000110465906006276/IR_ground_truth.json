@@ -21,7 +21,7 @@
             "To": [
                 "DRS TECHNOLOGIES, INC."
             ],
-            "PurchasePrice": "300000000",
+            "PurchasePrice": "345000000",
             "TimeLimit": {
                 "leftOp": "now",
                 "operator": "<=",

@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined5_ground_truth {
+contract IndentureAgreement_5 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -28,9 +28,9 @@ contract undefined5_ground_truth {
         EffectiveTime = 1578585600;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "Gevo, Inc.";
+        sellerName = "Gevo";
         seller = address(0);
-        buyerName =["Wilmington Savings Fund Society, FSB"];
+        buyerName =["Wilmington Savings Fund Society"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

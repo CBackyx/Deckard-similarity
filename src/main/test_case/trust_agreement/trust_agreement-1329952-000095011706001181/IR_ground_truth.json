@@ -33,7 +33,7 @@
     "Transfers": true,
     "Terminations": {
         "OtherTermination": true,
-        "OutOfDateTermination": false,
+        "OutOfDateTermination": true,
         "TransferTermination": true
     }
 }

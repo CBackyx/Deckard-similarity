@@ -1,19 +1,19 @@
 {
     "ContractCategory": "SecurityPurchaseAgreement",
     "SellerName": [
-        "Parkway Properties, Inc."
+        "Giga-tronics Incorporated"
     ],
     "BuyerName": [
         ""
     ],
     "EffectiveTime": [
-        "1000"
+        "June 27, 2013"
     ],
     "CloseTime": [
-        "1000"
+        ""
     ],
     "OutSideClosingDate": [
-        "1000"
+        ""
     ],
     "Payments": [
         {
@@ -21,9 +21,9 @@
                 ""
             ],
             "To": [
-                "Parkway Properties, Inc."
+                "Giga-tronics Incorporated"
             ],
-            "PurchasePrice": "151625002",
+            "PurchasePrice": "858171.08",
             "TimeLimit": {
                 "leftOp": "now",
                 "operator": "<=",
@@ -35,7 +35,7 @@
     "Transfers": true,
     "Terminations": {
         "OtherTermination": true,
-        "OutOfDateTermination": false,
+        "OutOfDateTermination": true,
         "TransferTermination": true
     }
 }

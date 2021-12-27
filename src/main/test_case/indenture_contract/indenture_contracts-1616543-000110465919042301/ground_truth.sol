@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined7_ground_truth {
+contract IndentureAgreement_7 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -28,7 +28,7 @@ contract undefined7_ground_truth {
         EffectiveTime = 1563984000;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "SENSEONICS HOLDINGS, INC.";
+        sellerName = "SENSEONICS HOLDINGS";
         seller = address(0);
         buyerName =["U.S. Bank National Association"];
         buyer =[address(0)];

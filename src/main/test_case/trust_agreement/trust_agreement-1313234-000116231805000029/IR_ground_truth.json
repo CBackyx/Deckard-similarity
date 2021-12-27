@@ -1,10 +1,10 @@
 {
     "ContractCategory": "",
     "SellerName": [
-        "STRUCTURED ASSET SECURITIES CORPORATION"
+        "LASALLE BANK NATIONAL ASSOCIATION"
     ],
     "BuyerName": [
-        "LASALLE BANK NATIONAL ASSOCIATION"
+        "STRUCTURED ASSET SECURITIES CORPORATION"
     ],
     "EffectiveTime": [
         "December 1, 2004"
@@ -16,10 +16,10 @@
     "Payments": [
         {
             "From": [
-                "LASALLE BANK NATIONAL ASSOCIATION"
+                "STRUCTURED ASSET SECURITIES CORPORATION"
             ],
             "To": [
-                "STRUCTURED ASSET SECURITIES CORPORATION"
+                "LASALLE BANK NATIONAL ASSOCIATION"
             ],
             "PurchasePrice": "",
             "TimeLimit": {
@@ -33,7 +33,7 @@
     "Transfers": true,
     "Terminations": {
         "OtherTermination": true,
-        "OutOfDateTermination": false,
+        "OutOfDateTermination": true,
         "TransferTermination": true
     }
 }

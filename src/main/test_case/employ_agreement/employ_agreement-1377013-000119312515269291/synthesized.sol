@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined5_synthesized {
+contract undefined_5 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,9 +25,9 @@ contract undefined5_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = -30610224000;
-        CloseTime = -30610224000;
-        OutSideClosingDate = -30610224000;
+        EffectiveTime = 1380556800;
+        CloseTime = 1000;
+        OutSideClosingDate = 1000;
         sellerName = "William Osbourn";
         seller = address(0);
         buyerName =["TIME WARNER CABLE INC."];
@@ -39,7 +39,7 @@ contract undefined5_synthesized {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 495019;
+        uint256 price = 1509807;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);
@@ -115,18 +115,6 @@ contract undefined5_synthesized {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
-    }
-    function terminateByOutOfDate() public {
-        uint currentTime = oracle.getTime();
-        require(currentTime >= OutSideClosingDate);
-        emit TerminatedByOutOfDate();
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            state[i] = State.Inactive;
-            buyer[i].transfer(pricePayedByBuyer[i]);
-        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

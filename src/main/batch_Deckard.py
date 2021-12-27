@@ -28,7 +28,7 @@ for folder in os.listdir(contract_path):
                 ]
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
         process.wait()
-        print(c_path)
+        print(x)
         # print(dirNamePatterns[i] + testcase_Dirs[i][j])
         print(process.stdout.read().decode('utf-8'))
 

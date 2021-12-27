@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined0_ground_truth {
+contract IndentureAgreement_0 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -30,7 +30,7 @@ contract undefined0_ground_truth {
         OutSideClosingDate = 1000;
         sellerName = "NorthStar Realty Finance Limited Partnership";
         seller = address(0);
-        buyerName =["Wilmington Trust, National Association"];
+        buyerName =["Wilmington Trust"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

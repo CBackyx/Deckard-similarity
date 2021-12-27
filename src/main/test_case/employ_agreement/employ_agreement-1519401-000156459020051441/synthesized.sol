@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined8_synthesized {
+contract undefined_8 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,9 +25,9 @@ contract undefined8_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = -30610224000;
-        CloseTime = -30610224000;
-        OutSideClosingDate = -30610224000;
+        EffectiveTime = 1601395200;
+        CloseTime = 1000;
+        OutSideClosingDate = 1000;
         sellerName = "Catherine R. Atwood";
         seller = address(0);
         buyerName =["Regional Management Corp."];
@@ -133,18 +133,6 @@ contract undefined8_synthesized {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
-    }
-    function terminateByOutOfDate() public {
-        uint currentTime = oracle.getTime();
-        require(currentTime >= OutSideClosingDate);
-        emit TerminatedByOutOfDate();
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            state[i] = State.Inactive;
-            buyer[i].transfer(pricePayedByBuyer[i]);
-        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

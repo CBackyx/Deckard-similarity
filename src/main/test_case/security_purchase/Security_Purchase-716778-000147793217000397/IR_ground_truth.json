@@ -4,21 +4,21 @@
         "SPO Global Inc."
     ],
     "BuyerName": [
-        "Blackbridge Capital Growth Fund, LLC"
+        "Blackbridge Capital Growth Fund"
     ],
     "EffectiveTime": [
-        "1000"
+        "June 23, 2016"
     ],
     "CloseTime": [
-        "1000"
+        ""
     ],
     "OutSideClosingDate": [
-        "1000"
+        ""
     ],
     "Payments": [
         {
             "From": [
-                "Blackbridge Capital Growth Fund, LLC"
+                "Blackbridge Capital Growth Fund"
             ],
             "To": [
                 "SPO Global Inc."

@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined1_ground_truth {
+contract CreditAgreement_1 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -30,7 +30,7 @@ contract undefined1_ground_truth {
         OutSideClosingDate = 1151596800;
         sellerName = "STANDARD PARKING CORPORATION";
         seller = address(0);
-        buyerName =[""];
+        buyerName =["Lenders"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

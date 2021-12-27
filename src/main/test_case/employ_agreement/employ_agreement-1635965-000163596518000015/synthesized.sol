@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined10_synthesized {
+contract undefined_10 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,9 +25,9 @@ contract undefined10_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = -30610224000;
-        CloseTime = -30610224000;
-        OutSideClosingDate = -30610224000;
+        EffectiveTime = 1000;
+        CloseTime = 1000;
+        OutSideClosingDate = 1000;
         sellerName = "Robert Klawonn";
         seller = address(0);
         buyerName =["4M Carbon Fiber Corp."];
@@ -46,28 +46,10 @@ contract undefined10_synthesized {
         pricePayedByBuyer[0] += price;
         state[0] = State.Locked;
     }
-    function purchaseConfirm(uint32 buyerIndex) public {
-        require(buyerIndex < buyer.length);
-        if(msg.sender == seller) {
-            purchaseSellerConfirmed[buyerIndex] = true;
-            return;
-        }
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            if(msg.sender == buyer[i]) {
-                purchaseBuyerConfirmed[i] = true;
-                return;
-            }
-        }
-    }
     function payRelease_0() public {
         require(msg.sender == buyer[0]);
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
-        require(purchaseBuyerConfirmed[0]);
-        require(purchaseSellerConfirmed[0]);
         emit Released(0);
         state[0] = State.Release;
         seller.transfer(pricePayedByBuyer[0]);
@@ -133,18 +115,6 @@ contract undefined10_synthesized {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
-    }
-    function terminateByOutOfDate() public {
-        uint currentTime = oracle.getTime();
-        require(currentTime >= OutSideClosingDate);
-        emit TerminatedByOutOfDate();
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            state[i] = State.Inactive;
-            buyer[i].transfer(pricePayedByBuyer[i]);
-        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

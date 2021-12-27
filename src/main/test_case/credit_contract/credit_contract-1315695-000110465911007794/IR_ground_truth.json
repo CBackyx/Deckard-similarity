@@ -1,10 +1,10 @@
 {
     "ContractCategory": "",
     "SellerName": [
-        "ROCKWOOD SPECIALTIES GROUP, INC."
+        "ROCKWOOD SPECIALTIES GROUP"
     ],
     "BuyerName": [
-        ""
+        "Lenders"
     ],
     "EffectiveTime": [
         "February 10, 2011"
@@ -19,7 +19,7 @@
                 ""
             ],
             "To": [
-                "ROCKWOOD SPECIALTIES GROUP, INC."
+                "ROCKWOOD SPECIALTIES GROUP"
             ],
             "PurchasePrice": "850000000",
             "TimeLimit": {

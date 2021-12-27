@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract SecurityPurchaseAgreement7_synthesized {
+contract SecurityPurchaseAgreement_7 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,12 +25,12 @@ contract SecurityPurchaseAgreement7_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = -30610224000;
-        CloseTime = -30610224000;
-        OutSideClosingDate = -30610224000;
+        EffectiveTime = 1000;
+        CloseTime = 1000;
+        OutSideClosingDate = 1502726400;
         sellerName = "MoviePass Inc.";
         seller = address(0);
-        buyerName =["Helios and Matheson Analytics Inc."];
+        buyerName =["MOVIEPASS INC"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

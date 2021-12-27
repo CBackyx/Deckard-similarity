@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined8_ground_truth {
+contract CreditAgreement_8 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -28,9 +28,9 @@ contract undefined8_ground_truth {
         EffectiveTime = 1119888000;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "WILLIAMS SCOTSMAN, INC.";
+        sellerName = "WILLIAMS SCOTSMAN";
         seller = address(0);
-        buyerName =["BANK OF AMERICA, N.A."];
+        buyerName =["Lenders"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

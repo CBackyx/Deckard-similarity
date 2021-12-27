@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined1_synthesized {
+contract CreditAgreement_1 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -27,10 +27,10 @@ contract undefined1_synthesized {
     constructor() public payable {
         EffectiveTime = 1062000000;
         CloseTime = 1000;
-        OutSideClosingDate = 1151596800;
+        OutSideClosingDate = 1001779200;
         sellerName = "STANDARD PARKING CORPORATION";
         seller = address(0);
-        buyerName =[""];
+        buyerName =["Lenders"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,7 +39,7 @@ contract undefined1_synthesized {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = NaN;
+        uint256 price = 500000000;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);

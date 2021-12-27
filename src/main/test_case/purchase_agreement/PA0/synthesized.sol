@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract PurchaseAgreement0_synthesized {
+contract PurchaseAgreement_0 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;

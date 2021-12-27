@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract SecurityPurchaseAgreement1_ground_truth {
+contract SecurityPurchaseAgreement_1 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;

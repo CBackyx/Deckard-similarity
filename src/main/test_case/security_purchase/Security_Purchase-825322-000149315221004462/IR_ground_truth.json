@@ -4,16 +4,16 @@
         "MPHASE TECHNOLOGIES, INC."
     ],
     "BuyerName": [
-        ""
+        "[___]"
     ],
     "EffectiveTime": [
-        "1000"
+        "January 25, 2021"
     ],
     "CloseTime": [
-        "1000"
+        ""
     ],
     "OutSideClosingDate": [
-        "1000"
+        ""
     ],
     "Payments": [
         {
@@ -34,8 +34,8 @@
     ],
     "Transfers": true,
     "Terminations": {
-        "OtherTermination": false,
+        "OtherTermination": true,
         "OutOfDateTermination": false,
-        "TransferTermination": false
+        "TransferTermination": true
     }
 }

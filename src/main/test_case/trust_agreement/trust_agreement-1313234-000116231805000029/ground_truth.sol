@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined4_ground_truth {
+contract TrustAgreement_4 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -28,9 +28,9 @@ contract undefined4_ground_truth {
         EffectiveTime = 1101830400;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "STRUCTURED ASSET SECURITIES CORPORATION";
+        sellerName = "LASALLE BANK NATIONAL ASSOCIATION";
         seller = address(0);
-        buyerName =["LASALLE BANK NATIONAL ASSOCIATION"];
+        buyerName =["STRUCTURED ASSET SECURITIES CORPORATION"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -115,6 +115,18 @@ contract undefined4_ground_truth {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
+    }
+    function terminateByOutOfDate() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime >= OutSideClosingDate);
+        emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

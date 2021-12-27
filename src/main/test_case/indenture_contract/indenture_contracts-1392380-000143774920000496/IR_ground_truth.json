@@ -1,10 +1,10 @@
 {
     "ContractCategory": "",
     "SellerName": [
-        "Gevo, Inc."
+        "Gevo"
     ],
     "BuyerName": [
-        "Wilmington Savings Fund Society, FSB"
+        "Wilmington Savings Fund Society"
     ],
     "EffectiveTime": [
         "January 10, 2020"
@@ -16,10 +16,10 @@
     "Payments": [
         {
             "From": [
-                "Wilmington Savings Fund Society, FSB"
+                "Wilmington Savings Fund Society"
             ],
             "To": [
-                "Gevo, Inc."
+                "Gevo"
             ],
             "PurchasePrice": "7140000",
             "TimeLimit": {

@@ -4,7 +4,7 @@
         "STANDARD PARKING CORPORATION"
     ],
     "BuyerName": [
-        ""
+        "Lenders"
     ],
     "EffectiveTime": [
         "August 28, 2003"
@@ -16,7 +16,7 @@
     "Payments": [
         {
             "From": [
-                ""
+                "Lenders"
             ],
             "To": [
                 "STANDARD PARKING CORPORATION"

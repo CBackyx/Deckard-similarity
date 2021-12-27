@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined4_synthesized {
+contract undefined_4 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,12 +25,12 @@ contract undefined4_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = -30610224000;
-        CloseTime = -30610224000;
-        OutSideClosingDate = -30610224000;
+        EffectiveTime = 1566921600;
+        CloseTime = 1000;
+        OutSideClosingDate = 1693152000;
         sellerName = "Manmeet S. Soni";
         seller = address(0);
-        buyerName =["Reata Pharmaceuticals, Inc."];
+        buyerName =[""];
         buyer =[address(0)];
     }
     function pay_0() public payable {

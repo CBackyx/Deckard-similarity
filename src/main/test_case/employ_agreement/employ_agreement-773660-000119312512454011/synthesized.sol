@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined11_synthesized {
+contract undefined_11 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,22 +25,16 @@ contract undefined11_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = -30610224000;
-        CloseTime = -30610224000;
-        OutSideClosingDate = -30610224000;
+        EffectiveTime = 1351699200;
+        CloseTime = 1000;
+        OutSideClosingDate = 1000;
         sellerName = "R. Scott Donovan";
         seller = address(0);
-        buyerName =["HealthMarkets, Inc."];
-        buyer =[address(0)];
     }
     function pay_0() public payable {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
-        uint currentTime = oracle.getTime();
-        require(currentTime <= CloseTime, "Time later than Close time");
-        uint256 currentPrice = oracle.getPrice();
-        uint256 price = 500000;
-        price = price / currentPrice;
+        uint256 price = 0;
         require(msg.value == price);
         emit Payed(0);
         pricePayedByBuyer[0] += price;
@@ -64,8 +58,6 @@ contract undefined11_synthesized {
     }
     function payRelease_0() public {
         require(msg.sender == buyer[0]);
-        uint currentTime = oracle.getTime();
-        require(currentTime <= CloseTime, "Time later than Close time");
         require(purchaseBuyerConfirmed[0]);
         require(purchaseSellerConfirmed[0]);
         emit Released(0);
@@ -133,6 +125,18 @@ contract undefined11_synthesized {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
+    }
+    function terminateByOutOfDate() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime >= OutSideClosingDate);
+        emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();
