@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract UnderWritingAgeement2_synthesized {
+contract UnderwritingAgreement_2 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,12 +25,12 @@ contract UnderWritingAgeement2_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = -30610224000;
-        CloseTime = -30610224000;
-        OutSideClosingDate = -30610224000;
+        EffectiveTime = 1466006400;
+        CloseTime = 1000;
+        OutSideClosingDate = 1686844800;
         sellerName = "Bunge Limited";
         seller = address(0);
-        buyerName =["U.S. Bank National Association"];
+        buyerName =["Bermuda Company"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,17 +39,35 @@ contract UnderWritingAgeement2_synthesized {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 200000000;
+        uint256 price = 630;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);
         pricePayedByBuyer[0] += price;
         state[0] = State.Locked;
     }
+    function purchaseConfirm(uint32 buyerIndex) public {
+        require(buyerIndex < buyer.length);
+        if(msg.sender == seller) {
+            purchaseSellerConfirmed[buyerIndex] = true;
+            return;
+        }
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            if(msg.sender == buyer[i]) {
+                purchaseBuyerConfirmed[i] = true;
+                return;
+            }
+        }
+    }
     function payRelease_0() public {
         require(msg.sender == buyer[0]);
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
+        require(purchaseBuyerConfirmed[0]);
+        require(purchaseSellerConfirmed[0]);
         emit Released(0);
         state[0] = State.Release;
         seller.transfer(pricePayedByBuyer[0]);
@@ -115,6 +133,18 @@ contract UnderWritingAgeement2_synthesized {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
+    }
+    function terminateByOutOfDate() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime >= OutSideClosingDate);
+        emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

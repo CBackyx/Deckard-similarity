@@ -30,7 +30,7 @@ contract UnderwritingAgreement_9 {
         OutSideClosingDate = 1000;
         sellerName = "AEGON N.V.";
         seller = address(0);
-        buyerName =[""];
+        buyerName =["Underwriters"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,7 +39,7 @@ contract UnderwritingAgreement_9 {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 75000000;
+        uint256 price = 500000000;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);

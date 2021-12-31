@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract RegistrationRightAgreement2_synthesized {
+contract RegistrationRightAgreement_2 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,9 +25,9 @@ contract RegistrationRightAgreement2_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = -30610224000;
-        CloseTime = -30610224000;
-        OutSideClosingDate = -30610224000;
+        EffectiveTime = 1609948800;
+        CloseTime = 1000;
+        OutSideClosingDate = 1625068800;
         sellerName = "comScore, Inc.";
         seller = address(0);
         buyerName =["Charter Communications Holding Company, LLC"];

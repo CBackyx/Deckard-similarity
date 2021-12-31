@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract UnderWritingAgeement4_synthesized {
+contract UnderwritingAgreement_4 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,12 +25,12 @@ contract UnderWritingAgeement4_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = -30610224000;
-        CloseTime = -30610224000;
-        OutSideClosingDate = -30610224000;
-        sellerName = "Wachovia Commercial Mortgage Securities, Inc.";
+        EffectiveTime = 1117555200;
+        CloseTime = 1000;
+        OutSideClosingDate = 1119369600;
+        sellerName = "Wachovia Bank";
         seller = address(0);
-        buyerName =[""];
+        buyerName =["Underwritten Certificates"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -133,6 +133,18 @@ contract UnderWritingAgeement4_synthesized {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
+    }
+    function terminateByOutOfDate() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime >= OutSideClosingDate);
+        emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

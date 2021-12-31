@@ -1,13 +1,13 @@
 {
     "ContractCategory": "UnderWritingAgeement",
     "SellerName": [
-        "Transocean Inc."
+        ""
     ],
     "BuyerName": [
-        ""
+        "The Bank of New York Mellon"
     ],
     "EffectiveTime": [
-        ""
+        "February 15, 2013"
     ],
     "CloseTime": [
         ""
@@ -18,12 +18,12 @@
     "Payments": [
         {
             "From": [
-                ""
+                "The Bank of New York Mellon"
             ],
             "To": [
-                "Transocean Inc."
+                ""
             ],
-            "PurchasePrice": "750000000",
+            "PurchasePrice": "250000000",
             "TimeLimit": {
                 "leftOp": "now",
                 "operator": "<=",
@@ -36,6 +36,6 @@
     "Terminations": {
         "OtherTermination": true,
         "OutOfDateTermination": false,
-        "TransferTermination": false
+        "TransferTermination": true
     }
 }

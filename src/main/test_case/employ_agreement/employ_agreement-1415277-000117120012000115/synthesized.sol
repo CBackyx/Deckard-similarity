@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined6_synthesized {
+contract undefined_6 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,9 +25,9 @@ contract undefined6_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = -30610224000;
-        CloseTime = -30610224000;
-        OutSideClosingDate = -30610224000;
+        EffectiveTime = 1078329600;
+        CloseTime = 1000;
+        OutSideClosingDate = 1000;
         sellerName = "Warren S. Orlando";
         seller = address(0);
         buyerName =["1st United Bancorp, Inc."];

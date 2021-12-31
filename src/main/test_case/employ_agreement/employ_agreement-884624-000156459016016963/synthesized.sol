@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined12_synthesized {
+contract undefined_12 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,9 +25,9 @@ contract undefined12_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = -30610224000;
-        CloseTime = -30610224000;
-        OutSideClosingDate = -30610224000;
+        EffectiveTime = 1375286400;
+        CloseTime = 1000;
+        OutSideClosingDate = 1404144000;
         sellerName = "Raymond Fujikawa";
         seller = address(0);
         buyerName =["Orthofix Inc."];

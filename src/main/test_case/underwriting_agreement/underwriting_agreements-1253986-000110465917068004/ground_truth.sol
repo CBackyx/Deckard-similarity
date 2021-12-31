@@ -39,7 +39,7 @@ contract UnderwritingAgreement_3 {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 125000000;
+        uint256 price = 143750000;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);

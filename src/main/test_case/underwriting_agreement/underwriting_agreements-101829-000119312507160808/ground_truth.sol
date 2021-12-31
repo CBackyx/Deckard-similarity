@@ -28,7 +28,7 @@ contract UnderwritingAgreement_0 {
         EffectiveTime = 988646400;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "";
+        sellerName = "Company";
         seller = address(0);
         buyerName =["The Bank of New York Trust Company"];
         buyer =[address(0)];

@@ -30,7 +30,7 @@ contract UnderwritingAgreement_8 {
         OutSideClosingDate = 1000;
         sellerName = "Hewlett-Packard Company";
         seller = address(0);
-        buyerName =[""];
+        buyerName =["Underwriters"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
