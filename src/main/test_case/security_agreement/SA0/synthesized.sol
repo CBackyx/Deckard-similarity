@@ -30,7 +30,7 @@ contract SecurityAgreement_0 {
         OutSideClosingDate = 1000;
         sellerName = "Adial Pharmaceuticals";
         seller = address(0);
-        buyerName =["Adial Pharmaceuticals"];
+        buyerName =[""];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -73,6 +73,20 @@ contract SecurityAgreement_0 {
         }
         require(validSender);
         fileHashMap[fileName] = hashCode;
+    }
+    function terminateByOthers() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime);
+        bool conditionState = oracle.getConditionState();
+        require(conditionState);
+        emit TerminatedByOthers();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function close() public {
         uint currentTime = oracle.getTime();

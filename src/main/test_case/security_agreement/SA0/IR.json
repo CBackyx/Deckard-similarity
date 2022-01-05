@@ -1,39 +1,34 @@
 {
-    "BuyerName": [
-        "Adial Pharmaceuticals"
-    ],
-    "CloseTime": [
-        ""
-    ],
-    "ContractCategory": "SecurityAgreement",
-    "EffectiveTime": [
-        "June 6, 2018,"
-    ],
-    "OutSideClosingDate": [],
-    "Payments": [
-        {
-            "From": [
-                "Adial Pharmaceuticals"
-            ],
-            "PurchasePrice": "325000",
-            "TimeLimit": {
-                "leftOp": "now",
-                "operator": "<=",
-                "rightOp": "CloseTime"
-            },
-            "To": [
-                "Adial Pharmaceuticals"
-            ],
-            "Transfer": false
-        }
-    ],
+    "ContractCategory": "StockPurchaseAgreement",
     "SellerName": [
         "Adial Pharmaceuticals"
     ],
+    "BuyerName": [""],
+    "EffectiveTime": [
+        "June 6, 2018"
+    ],
+    "CloseTime": [],
+    "OutSideClosingDate": [],
+    "Payments": [
+        {
+            "From": [],
+            "To": [
+                "Adial Pharmaceuticals"
+            ],
+            "TimeLimit": {
+                "operator": "<=",
+                "leftOp": "now",
+                "rightOp": "CloseTime",
+                "disabled": false
+            },
+            "PurchasePrice": 325000,
+            "Transfer": false
+        }
+    ],
+    "Transfers": true,
     "Terminations": {
-        "OtherTermination": false,
+        "TransferTermination": false,
         "OutOfDateTermination": false,
-        "TransferTermination": false
-    },
-    "Transfers": true
+        "OtherTermination": true
+    }
 }

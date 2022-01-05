@@ -30,7 +30,7 @@ contract PlanAndMergerAgreement_0 {
         OutSideClosingDate = 1632931200;
         sellerName = "Anworth Mortgage Asset Corporation";
         seller = address(0);
-        buyerName =["RC Merger Subsidiary, LLC"];
+        buyerName =["READY CAPITAL CORPORATION"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

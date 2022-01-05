@@ -30,7 +30,7 @@ contract RegistrationRightAgreement_7 {
         OutSideClosingDate = 1000;
         sellerName = "KAMADA LTD.";
         seller = address(0);
-        buyerName =[""];
+        buyerName =["FIMI"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -73,6 +73,62 @@ contract RegistrationRightAgreement_7 {
         }
         require(validSender);
         fileHashMap[fileName] = hashCode;
+    }
+    function terminateConfirm(uint32 buyerIndex) public {
+        require(buyerIndex < buyer.length);
+        if(msg.sender == seller) {
+            terminateSellerConfirmed[buyerIndex] = true;
+            return;
+        }
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            if(msg.sender == buyer[i]) {
+                terminateBuyerConfirmed[i] = true;
+                return;
+            }
+        }
+    }
+    function terminateByTransfer(uint buyerIndex) public {
+        bool validSender = false;
+        if(msg.sender == seller) {
+            validSender = true;
+        }
+        else {
+            uint buyerNum = buyerName.length;
+            for(uint i = 0;
+            i < buyerNum;
+            i ++) {
+                if(msg.sender == buyer[i]) {
+                    validSender = true;
+                    buyerIndex = i;
+                    break;
+                }
+            }
+        }
+        require(validSender);
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime);
+        require(terminateSellerConfirmed[buyerIndex]);
+        require(terminateBuyerConfirmed[buyerIndex]);
+        emit Terminated(buyerIndex);
+        state[buyerIndex] = State.Inactive;
+        buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
+    }
+    function terminateByOthers() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime);
+        bool conditionState = oracle.getConditionState();
+        require(conditionState);
+        emit TerminatedByOthers();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function close() public {
         uint currentTime = oracle.getTime();

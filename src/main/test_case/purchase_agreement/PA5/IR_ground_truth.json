@@ -1,7 +1,7 @@
 {
     "ContractCategory": "PurchaseAgreement",
     "SellerName": [
-        ""
+        "RANGE TEXAS PRODUCTION"
     ],
     "BuyerName": [
         "VANGUARD PERMIAN LLC"
@@ -34,7 +34,7 @@
     ],
     "Transfers": true,
     "Terminations": {
-        "OtherTermination": false,
+        "OtherTermination": true,
         "OutOfDateTermination": true,
         "TransferTermination": true
     }

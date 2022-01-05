@@ -28,9 +28,9 @@ contract RegistrationRightAgreement_13 {
         EffectiveTime = 966441600;
         CloseTime = 1000;
         OutSideClosingDate = 967651200;
-        sellerName = "Integrated Surgical Systems, Inc.";
+        sellerName = "Integrated Surgical Systems";
         seller = address(0);
-        buyerName =[""];
+        buyerName =["Investor"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

@@ -1,10 +1,10 @@
 {
     "ContractCategory": "",
     "SellerName": [
-        "AGILITI, INC."
+        "Agiliti"
     ],
     "BuyerName": [
-        "UMPIRE SPAC MERGER SUB, INC."
+        "FEDERAL STREET ACQUISITION CORP."
     ],
     "EffectiveTime": [
         "August 13, 2018"
@@ -16,10 +16,10 @@
     "Payments": [
         {
             "From": [
-                "UMPIRE SPAC MERGER SUB, INC."
+                "FEDERAL STREET ACQUISITION CORP."
             ],
             "To": [
-                "AGILITI, INC."
+                "Agiliti"
             ],
             "PurchasePrice": "",
             "TimeLimit": {

@@ -30,7 +30,7 @@ contract PlanAndMergerAgreement_9 {
         OutSideClosingDate = 1000;
         sellerName = "ADOLOR CORPORATION";
         seller = address(0);
-        buyerName =["FRD ACQUISITION CORPORATION"];
+        buyerName =["CUBIST PHARMACEUTICALS"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

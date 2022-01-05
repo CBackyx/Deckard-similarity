@@ -27,10 +27,10 @@ contract PlanAndMergerAgreement_3 {
     constructor() public payable {
         EffectiveTime = 1336320000;
         CloseTime = 1000;
-        OutSideClosingDate = 1351612800;
-        sellerName = "Westinghouse Solar, Inc.";
+        OutSideClosingDate = 1356883200;
+        sellerName = "Westinghouse Solar";
         seller = address(0);
-        buyerName =["CBD-WS Merger Sub, Inc."];
+        buyerName =["WESTINGHOUSE SOLAR"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,7 +39,7 @@ contract PlanAndMergerAgreement_3 {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 0;
+        uint256 price = 200000;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);

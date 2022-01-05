@@ -28,9 +28,9 @@ contract PlanAndMergerAgreement_2 {
         EffectiveTime = 1626710400;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "Mullen Automotive, Inc.";
+        sellerName = "Mullen Automotive";
         seller = address(0);
-        buyerName =["Mullen Acquisition, Inc."];
+        buyerName =["Net Element"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -133,6 +133,18 @@ contract PlanAndMergerAgreement_2 {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
+    }
+    function terminateByOutOfDate() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime >= OutSideClosingDate);
+        emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

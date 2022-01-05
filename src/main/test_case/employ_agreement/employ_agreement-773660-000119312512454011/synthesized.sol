@@ -9,15 +9,15 @@ contract undefined_11 {
     uint public EffectiveTime;
     uint public CloseTime;
     uint public OutSideClosingDate;
-    uint[1] public pricePayedByBuyer;
-    bool[1] public purchaseSellerConfirmed;
-    bool[1] public purchaseBuyerConfirmed;
+    uint[2] public pricePayedByBuyer;
+    bool[2] public purchaseSellerConfirmed;
+    bool[2] public purchaseBuyerConfirmed;
     mapping(string => uint32) fileHashMap;
-    bool[1] public terminateSellerConfirmed;
-    bool[1] public terminateBuyerConfirmed;
+    bool[2] public terminateSellerConfirmed;
+    bool[2] public terminateBuyerConfirmed;
     enum State {
         Created, Locked, Release, Transfered, Inactive }
-    State[1] public state;
+    State[2] public state;
     event Payed(uint paymentIndex);
     event Released(uint paymentIndex);
     event Terminated(uint buyerIndex);
@@ -30,11 +30,17 @@ contract undefined_11 {
         OutSideClosingDate = 1000;
         sellerName = "R. Scott Donovan";
         seller = address(0);
+        buyerName =["The Blackstone Group", "HealthMarkets"];
+        buyer =[address(0), address(0)];
     }
     function pay_0() public payable {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
-        uint256 price = 0;
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime, "Time later than Close time");
+        uint256 currentPrice = oracle.getPrice();
+        uint256 price = 500000;
+        price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);
         pricePayedByBuyer[0] += price;
@@ -58,6 +64,8 @@ contract undefined_11 {
     }
     function payRelease_0() public {
         require(msg.sender == buyer[0]);
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime, "Time later than Close time");
         require(purchaseBuyerConfirmed[0]);
         require(purchaseSellerConfirmed[0]);
         emit Released(0);
@@ -125,18 +133,6 @@ contract undefined_11 {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
-    }
-    function terminateByOutOfDate() public {
-        uint currentTime = oracle.getTime();
-        require(currentTime >= OutSideClosingDate);
-        emit TerminatedByOutOfDate();
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            state[i] = State.Inactive;
-            buyer[i].transfer(pricePayedByBuyer[i]);
-        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

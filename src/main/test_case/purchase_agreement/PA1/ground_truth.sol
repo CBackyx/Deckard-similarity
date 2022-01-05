@@ -146,6 +146,20 @@ contract PurchaseAgreement_1 {
             buyer[i].transfer(pricePayedByBuyer[i]);
         }
     }
+    function terminateByOthers() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime);
+        bool conditionState = oracle.getConditionState();
+        require(conditionState);
+        emit TerminatedByOthers();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
+    }
     function close() public {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime);

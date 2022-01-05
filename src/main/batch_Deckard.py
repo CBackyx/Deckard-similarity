@@ -32,4 +32,4 @@ for folder in os.listdir(contract_path):
         # print(dirNamePatterns[i] + testcase_Dirs[i][j])
         print(process.stdout.read().decode('utf-8'))
 
-# python batch_Deckard.py > test_case/batch_similarity.txt
+# python3 batch_Deckard.py > test_case/batch_similarity.txt

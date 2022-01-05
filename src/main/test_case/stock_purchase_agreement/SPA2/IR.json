@@ -1,39 +1,38 @@
 {
+    "ContractCategory": "StockPurchaseAgreement",
+    "SellerName": [
+        "Don Marcos Trading Co."
+    ],
     "BuyerName": [
         "Mark E. Tupper"
     ],
-    "CloseTime": [
-        ""
-    ],
-    "ContractCategory": "StockPurchaseAgreement",
     "EffectiveTime": [
         "July 14, 2009"
     ],
+    "CloseTime": [],
     "OutSideClosingDate": [],
     "Payments": [
         {
             "From": [
                 "Mark E. Tupper"
             ],
-            "PurchasePrice": "5000",
-            "TimeLimit": {
-                "leftOp": "now",
-                "operator": "<=",
-                "rightOp": "CloseTime"
-            },
             "To": [
                 "Don Marcos Trading Co."
             ],
+            "TimeLimit": {
+                "operator": "<=",
+                "leftOp": "now",
+                "rightOp": "CloseTime",
+                "disabled": false
+            },
+            "PurchasePrice": 5000,
             "Transfer": false
         }
     ],
-    "SellerName": [
-        "Don Marcos Trading Co."
-    ],
+    "Transfers": true,
     "Terminations": {
-        "OtherTermination": false,
+        "TransferTermination": false,
         "OutOfDateTermination": false,
-        "TransferTermination": false
-    },
-    "Transfers": true
+        "OtherTermination": true
+    }
 }

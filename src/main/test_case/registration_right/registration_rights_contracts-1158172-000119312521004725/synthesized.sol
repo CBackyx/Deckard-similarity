@@ -28,9 +28,9 @@ contract RegistrationRightAgreement_2 {
         EffectiveTime = 1609948800;
         CloseTime = 1000;
         OutSideClosingDate = 1625068800;
-        sellerName = "comScore, Inc.";
+        sellerName = "comScore";
         seller = address(0);
-        buyerName =["Charter Communications Holding Company, LLC"];
+        buyerName =["Charter Communications Holding Company"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,17 +39,35 @@ contract RegistrationRightAgreement_2 {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 68000000;
+        uint256 price = 100000000;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);
         pricePayedByBuyer[0] += price;
         state[0] = State.Locked;
     }
+    function purchaseConfirm(uint32 buyerIndex) public {
+        require(buyerIndex < buyer.length);
+        if(msg.sender == seller) {
+            purchaseSellerConfirmed[buyerIndex] = true;
+            return;
+        }
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            if(msg.sender == buyer[i]) {
+                purchaseBuyerConfirmed[i] = true;
+                return;
+            }
+        }
+    }
     function payRelease_0() public {
         require(msg.sender == buyer[0]);
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
+        require(purchaseBuyerConfirmed[0]);
+        require(purchaseSellerConfirmed[0]);
         emit Released(0);
         state[0] = State.Release;
         seller.transfer(pricePayedByBuyer[0]);

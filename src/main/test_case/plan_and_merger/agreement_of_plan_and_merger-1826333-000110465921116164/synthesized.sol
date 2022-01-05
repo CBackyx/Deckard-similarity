@@ -28,9 +28,9 @@ contract PlanAndMergerAgreement_6 {
         EffectiveTime = 1631721600;
         CloseTime = 1000;
         OutSideClosingDate = 1648656000;
-        sellerName = "Gogoro Inc.";
+        sellerName = "Princeville Global HK Limited";
         seller = address(0);
-        buyerName =["Starship Merger Sub I Limited"];
+        buyerName =["Poema Global Holdings Corp."];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,7 +39,7 @@ contract PlanAndMergerAgreement_6 {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 0;
+        uint256 price = 2011251500;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);

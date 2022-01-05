@@ -4,7 +4,7 @@
         "comScore, Inc."
     ],
     "BuyerName": [
-        "Charter Communications Holding Company, LLC"
+        "Charter Communications Holding Company"
     ],
     "EffectiveTime": [
         "January 7, 2021"
@@ -18,7 +18,7 @@
     "Payments": [
         {
             "From": [
-                "Charter Communications Holding Company, LLC"
+                "Charter Communications Holding Company"
             ],
             "To": [
                 "comScore, Inc."
@@ -29,7 +29,7 @@
                 "operator": "<=",
                 "rightOp": "CloseTime"
             },
-            "Transfer": false
+            "Transfer": true
         }
     ],
     "Transfers": true,

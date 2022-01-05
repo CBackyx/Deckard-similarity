@@ -30,7 +30,7 @@ contract PlanAndMergerAgreement_4 {
         OutSideClosingDate = 1537891200;
         sellerName = "GGP Inc.";
         seller = address(0);
-        buyerName =["Goldfinch Merger Sub Corp."];
+        buyerName =["Brookfield Property Partners L.P."];
         buyer =[address(0)];
     }
     function pay_0() public payable {

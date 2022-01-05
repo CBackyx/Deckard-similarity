@@ -28,9 +28,9 @@ contract PlanAndMergerAgreement_3 {
         EffectiveTime = 1336320000;
         CloseTime = 1000;
         OutSideClosingDate = 1351612800;
-        sellerName = "Westinghouse Solar, Inc.";
+        sellerName = "Westinghouse Solar";
         seller = address(0);
-        buyerName =["CBD-WS Merger Sub, Inc."];
+        buyerName =["CBD-WS Merger Sub"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

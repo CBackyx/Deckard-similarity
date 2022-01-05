@@ -1,10 +1,10 @@
 {
     "ContractCategory": "",
     "SellerName": [
-        "Westinghouse Solar, Inc."
+        "Westinghouse Solar"
     ],
     "BuyerName": [
-        "CBD-WS Merger Sub, Inc."
+        "CBD-WS Merger Sub"
     ],
     "EffectiveTime": [
         "May 7, 2012"
@@ -16,10 +16,10 @@
     "Payments": [
         {
             "From": [
-                "CBD-WS Merger Sub, Inc."
+                "CBD-WS Merger Sub"
             ],
             "To": [
-                "Westinghouse Solar, Inc."
+                "Westinghouse Solar"
             ],
             "PurchasePrice": "",
             "TimeLimit": {

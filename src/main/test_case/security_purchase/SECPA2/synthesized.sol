@@ -30,7 +30,7 @@ contract SecurityPurchaseAgreement_2 {
         OutSideClosingDate = 1000;
         sellerName = "TEGO CYBER INC.";
         seller = address(0);
-        buyerName =["TEGO CYBER INC."];
+        buyerName =["DOMINIQUE JOYAL"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

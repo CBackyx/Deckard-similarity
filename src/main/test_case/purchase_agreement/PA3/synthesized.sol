@@ -74,6 +74,18 @@ contract PurchaseAgreement_3 {
         require(validSender);
         fileHashMap[fileName] = hashCode;
     }
+    function terminateByOutOfDate() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime >= OutSideClosingDate);
+        emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
+    }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime);

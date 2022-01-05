@@ -25,12 +25,12 @@ contract RegistrationRightAgreement_10 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1525276800;
+        EffectiveTime = 1524067200;
         CloseTime = 1000;
-        OutSideClosingDate = 1000;
+        OutSideClosingDate = 1527696000;
         sellerName = "Apergy Corporation";
         seller = address(0);
-        buyerName =["Wells Fargo Bank"];
+        buyerName =["Purchasers"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -46,10 +46,28 @@ contract RegistrationRightAgreement_10 {
         pricePayedByBuyer[0] += price;
         state[0] = State.Locked;
     }
+    function purchaseConfirm(uint32 buyerIndex) public {
+        require(buyerIndex < buyer.length);
+        if(msg.sender == seller) {
+            purchaseSellerConfirmed[buyerIndex] = true;
+            return;
+        }
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            if(msg.sender == buyer[i]) {
+                purchaseBuyerConfirmed[i] = true;
+                return;
+            }
+        }
+    }
     function payRelease_0() public {
         require(msg.sender == buyer[0]);
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
+        require(purchaseBuyerConfirmed[0]);
+        require(purchaseSellerConfirmed[0]);
         emit Released(0);
         state[0] = State.Release;
         seller.transfer(pricePayedByBuyer[0]);
@@ -115,6 +133,18 @@ contract RegistrationRightAgreement_10 {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
+    }
+    function terminateByOutOfDate() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime >= OutSideClosingDate);
+        emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

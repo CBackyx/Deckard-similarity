@@ -25,12 +25,12 @@ contract RegistrationRightAgreement_5 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1319472000;
+        EffectiveTime = 1000;
         CloseTime = 1000;
-        OutSideClosingDate = 1000;
-        sellerName = "GENOCEA BIOSCIENCES, INC.";
+        OutSideClosingDate = 1633017600;
+        sellerName = "Company";
         seller = address(0);
-        buyerName =["LIGHTHOUSE CAPITAL PARTNERS VI, L.P."];
+        buyerName =["GENOCEA BIOSCIENCES"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,7 +39,7 @@ contract RegistrationRightAgreement_5 {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 1000;
+        uint256 price = 40000000;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);
@@ -92,10 +92,66 @@ contract RegistrationRightAgreement_5 {
         require(validSender);
         fileHashMap[fileName] = hashCode;
     }
+    function terminateConfirm(uint32 buyerIndex) public {
+        require(buyerIndex < buyer.length);
+        if(msg.sender == seller) {
+            terminateSellerConfirmed[buyerIndex] = true;
+            return;
+        }
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            if(msg.sender == buyer[i]) {
+                terminateBuyerConfirmed[i] = true;
+                return;
+            }
+        }
+    }
+    function terminateByTransfer(uint buyerIndex) public {
+        bool validSender = false;
+        if(msg.sender == seller) {
+            validSender = true;
+        }
+        else {
+            uint buyerNum = buyerName.length;
+            for(uint i = 0;
+            i < buyerNum;
+            i ++) {
+                if(msg.sender == buyer[i]) {
+                    validSender = true;
+                    buyerIndex = i;
+                    break;
+                }
+            }
+        }
+        require(validSender);
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime);
+        require(terminateSellerConfirmed[buyerIndex]);
+        require(terminateBuyerConfirmed[buyerIndex]);
+        emit Terminated(buyerIndex);
+        state[buyerIndex] = State.Inactive;
+        buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
+    }
     function terminateByOutOfDate() public {
         uint currentTime = oracle.getTime();
         require(currentTime >= OutSideClosingDate);
         emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
+    }
+    function terminateByOthers() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime);
+        bool conditionState = oracle.getConditionState();
+        require(conditionState);
+        emit TerminatedByOthers();
         uint buyerNum = buyerName.length;
         for(uint i = 0;
         i < buyerNum;

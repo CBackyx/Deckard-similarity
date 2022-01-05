@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract CreditAgreement_7 {
+contract CreditAgreement_6 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -28,7 +28,7 @@ contract CreditAgreement_7 {
         EffectiveTime = 1138204800;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "CADENA MEXICANA DE EXHIBICIÓN, S.A. DE C.V.";
+        sellerName = "AMC ENTERTAINMENT INC";
         seller = address(0);
         buyerName =["CITICORP NORTH AMERICA, INC."];
         buyer =[address(0)];

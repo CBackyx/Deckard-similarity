@@ -1,10 +1,10 @@
 {
     "ContractCategory": "",
     "SellerName": [
-        "Mullen Automotive, Inc."
+        "Mullen Automotive"
     ],
     "BuyerName": [
-        "Mullen Acquisition, Inc."
+        "Net Element"
     ],
     "EffectiveTime": [
         "July 20, 2021"
@@ -16,10 +16,10 @@
     "Payments": [
         {
             "From": [
-                "Mullen Acquisition, Inc."
+                "Net Element"
             ],
             "To": [
-                "Mullen Automotive, Inc."
+                "Mullen Automotive"
             ],
             "PurchasePrice": "",
             "TimeLimit": {
@@ -33,7 +33,7 @@
     "Transfers": true,
     "Terminations": {
         "OtherTermination": true,
-        "OutOfDateTermination": false,
+        "OutOfDateTermination": true,
         "TransferTermination": true
     }
 }

@@ -30,7 +30,7 @@ contract PlanAndMergerAgreement_9 {
         OutSideClosingDate = 1000;
         sellerName = "ADOLOR CORPORATION";
         seller = address(0);
-        buyerName =["FRD ACQUISITION CORPORATION"];
+        buyerName =["CUBIST PHARMACEUTICALS"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,7 +39,7 @@ contract PlanAndMergerAgreement_9 {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 0;
+        uint256 price = 125000;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);

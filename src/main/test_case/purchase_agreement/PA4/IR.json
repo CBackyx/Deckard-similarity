@@ -1,39 +1,38 @@
 {
+    "ContractCategory": "StockPurchaseAgreement",
+    "SellerName": [
+        "Yes Yield Investments Limited"
+    ],
     "BuyerName": [
         "Yes Yield Investments Limited"
     ],
-    "CloseTime": [
-        ""
-    ],
-    "ContractCategory": "PurchaseAgreement",
     "EffectiveTime": [
-        "May\u00a04, 2015,"
+        "May 4, 2015"
     ],
+    "CloseTime": [],
     "OutSideClosingDate": [],
     "Payments": [
         {
             "From": [
                 "Yes Yield Investments Limited"
             ],
-            "PurchasePrice": "25002000",
-            "TimeLimit": {
-                "leftOp": "now",
-                "operator": "<=",
-                "rightOp": "CloseTime"
-            },
             "To": [
-                "Solar Power"
+                "Yes Yield Investments Limited"
             ],
+            "TimeLimit": {
+                "operator": "<=",
+                "leftOp": "now",
+                "rightOp": "CloseTime",
+                "disabled": false
+            },
+            "PurchasePrice": 25002000,
             "Transfer": false
         }
     ],
-    "SellerName": [
-        "Solar Power"
-    ],
+    "Transfers": true,
     "Terminations": {
-        "OtherTermination": true,
+        "TransferTermination": false,
         "OutOfDateTermination": false,
-        "TransferTermination": false
-    },
-    "Transfers": true
+        "OtherTermination": true
+    }
 }

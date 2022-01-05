@@ -27,10 +27,10 @@ contract RegistrationRightAgreement_1 {
     constructor() public payable {
         EffectiveTime = 1103212800;
         CloseTime = 1000;
-        OutSideClosingDate = 1000;
-        sellerName = "Medivation, Inc.";
+        OutSideClosingDate = 1107964800;
+        sellerName = "Medivation";
         seller = address(0);
-        buyerName =["Orion Acquisition Corp."];
+        buyerName =["(“Stockholder”)."];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,7 +39,7 @@ contract RegistrationRightAgreement_1 {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 1000;
+        uint256 price = 1900000;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);
@@ -133,6 +133,18 @@ contract RegistrationRightAgreement_1 {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
+    }
+    function terminateByOutOfDate() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime >= OutSideClosingDate);
+        emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

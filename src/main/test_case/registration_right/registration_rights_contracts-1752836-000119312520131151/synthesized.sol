@@ -25,12 +25,12 @@ contract RegistrationRightAgreement_11 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1000;
+        EffectiveTime = 1577836800;
         CloseTime = 1000;
         OutSideClosingDate = 1596124800;
-        sellerName = "Covetrus, Inc.";
+        sellerName = "COVETRUS";
         seller = address(0);
-        buyerName =["CD&R VFC Holdings, L.P."];
+        buyerName =["CD&R VFC Holdings"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

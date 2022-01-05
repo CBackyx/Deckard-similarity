@@ -1,9 +1,9 @@
 {
     "SellerName": [
-        "Armada Enterprises GP, LLC"
+        "Armada Enterprises GP"
     ],
     "BuyerName": [
-        "MC 2 Consulting, Inc."
+        "MC 2 Consulting"
     ],
     "EffectiveTime": [
         "5th  May, 2016,"
@@ -15,10 +15,10 @@
     "Payments": [
         {
             "From": [
-                "MC 2 Consulting, Inc."
+                "MC 2 Consulting"
             ],
             "To": [
-                "Armada Enterprises GP, LLC"
+                "Armada Enterprises GP"
             ],
             "PurchasePrice": "50000",
             "TimeLimit": {
@@ -26,7 +26,7 @@
                 "operator": "<=",
                 "rightOp": "CloseTime"
             },
-            "Transfer": false
+            "Transfer": true
         }
     ],
     "Transfers": true,

@@ -28,9 +28,9 @@ contract PlanAndMergerAgreement_5 {
         EffectiveTime = 1534089600;
         CloseTime = 1000;
         OutSideClosingDate = 1546185600;
-        sellerName = "AGILITI, INC.";
+        sellerName = "Agiliti";
         seller = address(0);
-        buyerName =["UMPIRE SPAC MERGER SUB, INC."];
+        buyerName =["FEDERAL STREET ACQUISITION CORP."];
         buyer =[address(0)];
     }
     function pay_0() public payable {

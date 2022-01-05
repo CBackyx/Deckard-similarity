@@ -28,7 +28,7 @@ contract undefined_8 {
         EffectiveTime = 1000;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "Mark Capital, LLC";
+        sellerName = "Mark Capital";
         seller = address(0);
         buyerName =["Craig Pierson"];
         buyer =[address(0)];
@@ -73,6 +73,20 @@ contract undefined_8 {
         }
         require(validSender);
         fileHashMap[fileName] = hashCode;
+    }
+    function terminateByOthers() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime);
+        bool conditionState = oracle.getConditionState();
+        require(conditionState);
+        emit TerminatedByOthers();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function close() public {
         uint currentTime = oracle.getTime();

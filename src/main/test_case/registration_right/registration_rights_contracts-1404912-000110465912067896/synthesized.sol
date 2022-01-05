@@ -27,10 +27,10 @@ contract RegistrationRightAgreement_4 {
     constructor() public payable {
         EffectiveTime = 1348070400;
         CloseTime = 1000;
-        OutSideClosingDate = 1000;
+        OutSideClosingDate = 1009728000;
         sellerName = "CHINA CORD BLOOD CORPORATION";
         seller = address(0);
-        buyerName =["KKR CHINA HEALTHCARE INVESTMENT LIMITED"];
+        buyerName =["Codan Trust Company"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

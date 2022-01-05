@@ -27,10 +27,10 @@ contract PlanAndMergerAgreement_2 {
     constructor() public payable {
         EffectiveTime = 1626710400;
         CloseTime = 1000;
-        OutSideClosingDate = 1000;
-        sellerName = "Mullen Automotive, Inc.";
+        OutSideClosingDate = 1630339200;
+        sellerName = "Mullen Automotive";
         seller = address(0);
-        buyerName =["Mullen Acquisition, Inc."];
+        buyerName =["Net Element"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,7 +39,7 @@ contract PlanAndMergerAgreement_2 {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 0;
+        uint256 price = 10762500;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);
@@ -133,6 +133,18 @@ contract PlanAndMergerAgreement_2 {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
+    }
+    function terminateByOutOfDate() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime >= OutSideClosingDate);
+        emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

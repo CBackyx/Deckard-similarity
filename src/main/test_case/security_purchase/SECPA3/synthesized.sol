@@ -30,7 +30,7 @@ contract SecurityPurchaseAgreement_3 {
         OutSideClosingDate = 1000;
         sellerName = "G Medical Innovations Holdings Ltd.";
         seller = address(0);
-        buyerName =[""];
+        buyerName =["“Purchasers”)."];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -46,28 +46,10 @@ contract SecurityPurchaseAgreement_3 {
         pricePayedByBuyer[0] += price;
         state[0] = State.Locked;
     }
-    function purchaseConfirm(uint32 buyerIndex) public {
-        require(buyerIndex < buyer.length);
-        if(msg.sender == seller) {
-            purchaseSellerConfirmed[buyerIndex] = true;
-            return;
-        }
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            if(msg.sender == buyer[i]) {
-                purchaseBuyerConfirmed[i] = true;
-                return;
-            }
-        }
-    }
     function payRelease_0() public {
         require(msg.sender == buyer[0]);
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
-        require(purchaseBuyerConfirmed[0]);
-        require(purchaseSellerConfirmed[0]);
         emit Released(0);
         state[0] = State.Release;
         seller.transfer(pricePayedByBuyer[0]);

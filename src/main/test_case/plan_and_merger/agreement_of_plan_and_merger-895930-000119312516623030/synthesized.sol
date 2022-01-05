@@ -25,12 +25,12 @@ contract PlanAndMergerAgreement_8 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1465920000;
+        EffectiveTime = 1000;
         CloseTime = 1000;
-        OutSideClosingDate = 1000;
-        sellerName = "Envision Healthcare Holdings, Inc.";
+        OutSideClosingDate = 1009728000;
+        sellerName = "AmSurg Corp.";
         seller = address(0);
-        buyerName =["New Amethyst Corp."];
+        buyerName =["Envision Healthcare Holdings, Inc."];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,7 +39,7 @@ contract PlanAndMergerAgreement_8 {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 0;
+        uint256 price = 200;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);

@@ -34,7 +34,7 @@
     ],
     "Transfers": true,
     "Terminations": {
-        "OtherTermination": false,
+        "OtherTermination": true,
         "OutOfDateTermination": false,
         "TransferTermination": false
     }

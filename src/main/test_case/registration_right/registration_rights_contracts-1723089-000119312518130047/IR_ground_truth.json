@@ -4,7 +4,7 @@
         "Apergy Corporation"
     ],
     "BuyerName": [
-        "Wells Fargo Bank"
+        "Purchasers"
     ],
     "EffectiveTime": [
         "May 3, 2018"
@@ -18,7 +18,7 @@
     "Payments": [
         {
             "From": [
-                "Wells Fargo Bank"
+                "Purchasers"
             ],
             "To": [
                 "Apergy Corporation"
@@ -29,13 +29,13 @@
                 "operator": "<=",
                 "rightOp": "CloseTime"
             },
-            "Transfer": false
+            "Transfer": true
         }
     ],
     "Transfers": true,
     "Terminations": {
         "OtherTermination": true,
-        "OutOfDateTermination": false,
+        "OutOfDateTermination": true,
         "TransferTermination": true
     }
 }

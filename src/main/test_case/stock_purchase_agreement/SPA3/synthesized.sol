@@ -30,7 +30,7 @@ contract undefined_3 {
         OutSideClosingDate = 1617120000;
         sellerName = "BIOCARDIA";
         seller = address(0);
-        buyerName =["BIOCARDIA"];
+        buyerName =["LINCOLN PARK CAPITAL FUND"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -133,6 +133,18 @@ contract undefined_3 {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
+    }
+    function terminateByOutOfDate() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime >= OutSideClosingDate);
+        emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

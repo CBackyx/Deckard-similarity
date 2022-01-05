@@ -30,7 +30,7 @@ contract PlanAndMergerAgreement_0 {
         OutSideClosingDate = 1632931200;
         sellerName = "Anworth Mortgage Asset Corporation";
         seller = address(0);
-        buyerName =["RC Merger Subsidiary, LLC"];
+        buyerName =["READY CAPITAL CORPORATION"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,7 +39,7 @@ contract PlanAndMergerAgreement_0 {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 0;
+        uint256 price = 125000000;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);

@@ -36,7 +36,11 @@ contract UnderwritingAgreement_2 {
     function pay_0() public payable {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
-        uint256 price = 0;
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime, "Time later than Close time");
+        uint256 currentPrice = oracle.getPrice();
+        uint256 price = 200000000;
+        price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);
         pricePayedByBuyer[0] += price;
@@ -60,6 +64,8 @@ contract UnderwritingAgreement_2 {
     }
     function payRelease_0() public {
         require(msg.sender == buyer[0]);
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime, "Time later than Close time");
         require(purchaseBuyerConfirmed[0]);
         require(purchaseSellerConfirmed[0]);
         emit Released(0);
@@ -127,18 +133,6 @@ contract UnderwritingAgreement_2 {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
-    }
-    function terminateByOutOfDate() public {
-        uint currentTime = oracle.getTime();
-        require(currentTime >= OutSideClosingDate);
-        emit TerminatedByOutOfDate();
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            state[i] = State.Inactive;
-            buyer[i].transfer(pricePayedByBuyer[i]);
-        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

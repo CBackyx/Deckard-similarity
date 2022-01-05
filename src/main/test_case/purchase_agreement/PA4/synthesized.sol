@@ -28,7 +28,7 @@ contract PurchaseAgreement_4 {
         EffectiveTime = 1430668800;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "Solar Power";
+        sellerName = "Yes Yield Investments Limited";
         seller = address(0);
         buyerName =["Yes Yield Investments Limited"];
         buyer =[address(0)];

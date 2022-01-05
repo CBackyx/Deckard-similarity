@@ -30,7 +30,7 @@ contract PlanAndMergerAgreement_6 {
         OutSideClosingDate = 1648656000;
         sellerName = "Gogoro Inc.";
         seller = address(0);
-        buyerName =["Starship Merger Sub I Limited"];
+        buyerName =["Poema Global Holdings Corp."];
         buyer =[address(0)];
     }
     function pay_0() public payable {
