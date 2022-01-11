@@ -23,7 +23,7 @@ for folder in os.listdir(contract_path):
         
         cmd = ['python3', 
                 "calSolVecSimilarity.py",
-                c_rela_path + "/ground_truth.sol",
+                c_rela_path + "/ground_truth_proofread.sol",
                 c_rela_path + "/synthesized.sol"
                 ]
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
