@@ -1,130 +1,40 @@
-SPA5
-
-Vec cosine 0.9998748620816714
-Difference 1-norm 205.0
-Difference 2-norm 61.74949392505172
-
-SPA0
-
-Vec cosine 0.9995909693345875
-Difference 1-norm 70.0
-Difference 2-norm 13.638181696985855
-
-SPA3
-
-Vec cosine 0.9999174760958829
-Difference 1-norm 201.0
-Difference 2-norm 61.652250567193406
-
-SPA9
-
-Vec cosine 0.9997105357066556
-Difference 1-norm 201.0
-Difference 2-norm 61.652250567193406
-
-SPA6
-
-Vec cosine 0.9993860152114311
-Difference 1-norm 227.0
-Difference 2-norm 67.69785816405124
-
-SPA8
-
-Vec cosine 0.9992869433464556
-Difference 1-norm 239.0
-Difference 2-norm 66.70082458260917
-
-SPA7
-
-Vec cosine 0.9996439793307804
-Difference 1-norm 428.0
-Difference 2-norm 128.77111477346153
-
-SPA2
-
-Vec cosine 0.9978602301598547
-Difference 1-norm 405.0
-Difference 2-norm 117.55424279880332
-
-SPA4
-
-Vec cosine 0.9998531521279339
-Difference 1-norm 201.0
-Difference 2-norm 61.652250567193406
-
-SPA1
-
-Vec cosine 0.9996334690669939
-Difference 1-norm 180.0
-Difference 2-norm 47.853944456021594
-
-Security_Purchase-1001463-000138038917000049
+PA5
 
 Vec cosine 1.0000000000000002
 Difference 1-norm 0.0
 Difference 2-norm 0.0
 
-SECPA2
+PA3
 
-Vec cosine 0.9997105357066556
-Difference 1-norm 201.0
-Difference 2-norm 61.652250567193406
+Vec cosine 0.9988063880205262
+Difference 1-norm 369.0
+Difference 2-norm 112.88489712977551
 
-Security_Purchase-1009891-000119380517000861
+PA0
 
-Vec cosine 0.999952173535509
-Difference 1-norm 184.0
-Difference 2-norm 54.772255750516614
+Vec cosine 0.9967428628780386
+Difference 1-norm 719.0
+Difference 2-norm 219.8977034895999
 
-SECPA3
+PA4
 
-Vec cosine 0.999782214418797
-Difference 1-norm 70.0
-Difference 2-norm 13.638181696985855
+Vec cosine 0.9997961110129817
+Difference 1-norm 172.0
+Difference 2-norm 51.38093031466052
 
-Security_Purchase-1040792-000143774917014788
-
-Vec cosine 0.9999919023750333
-Difference 1-norm 4.0
-Difference 2-norm 2.8284271247461903
-
-Security_Purchase-716778-000147793217000397
-
-Vec cosine 0.9999546876485953
-Difference 1-norm 168.0
-Difference 2-norm 51.264022471905186
-
-Security_Purchase-849636-000149315221010354
+PA2
 
 Vec cosine 0.9980398959645943
 Difference 1-norm 719.0
 Difference 2-norm 219.8977034895999
 
-Security_Purchase-729237-000119312512213442
+PA1
 
 Vec cosine 1.0000000000000002
 Difference 1-norm 0.0
 Difference 2-norm 0.0
 
-Security_Purchase-825322-000149315221004462
-
-Vec cosine 0.9980398959645943
-Difference 1-norm 719.0
-Difference 2-norm 219.8977034895999
-
-Security_Purchase-719274-000143774913008407
-
-Vec cosine 1.0000000000000002
-Difference 1-norm 0.0
-Difference 2-norm 0.0
-
-SECPA0
-
-Vec cosine 0.9997105357066556
-Difference 1-norm 201.0
-Difference 2-norm 61.652250567193406
-
-Security_Purchase-1025536-000119312508191195
+Security_Purchase-876883-000114420419014106
 
 Vec cosine 1.0000000000000002
 Difference 1-norm 0.0
@@ -136,85 +46,73 @@ Vec cosine 0.9997105357066556
 Difference 1-norm 201.0
 Difference 2-norm 61.652250567193406
 
-Security_Purchase-876883-000114420419014106
+SECPA2
+
+Vec cosine 0.9997105357066556
+Difference 1-norm 201.0
+Difference 2-norm 61.652250567193406
+
+Security_Purchase-719274-000143774913008407
 
 Vec cosine 1.0000000000000002
 Difference 1-norm 0.0
 Difference 2-norm 0.0
 
-underwriting_agreements-912892-000110465919031794
+SECPA3
 
-Vec cosine 0.9999546876485953
-Difference 1-norm 168.0
-Difference 2-norm 51.264022471905186
+Vec cosine 0.999782214418797
+Difference 1-norm 70.0
+Difference 2-norm 13.638181696985855
 
-underwriting_agreements-101829-000119312507160808
-
-Vec cosine 0.9991790552567491
-Difference 1-norm 530.0
-Difference 2-norm 160.14368548275638
-
-underwriting_agreements-1253986-000110465917068004
-
-Vec cosine 0.9999403188612713
-Difference 1-norm 168.0
-Difference 2-norm 49.59838707054898
-
-underwriting_agreements-769218-000110465912005256
-
-Vec cosine 0.9999403188612713
-Difference 1-norm 168.0
-Difference 2-norm 49.59838707054898
-
-underwriting_agreements-1020569-000110465912056704
-
-Vec cosine 0.9998617497820135
-Difference 1-norm 77.0
-Difference 2-norm 19.313207915827967
-
-underwriting_agreements-1465128-000110465917020013
-
-Vec cosine 0.9999827501541789
-Difference 1-norm 6.0
-Difference 2-norm 4.242640687119285
-
-underwriting_agreements-1451505-000110465912063229
-
-Vec cosine 0.9987848054765698
-Difference 1-norm 686.0
-Difference 2-norm 209.60916010518244
-
-underwriting_agreements-47217-000119312511250713
-
-Vec cosine 0.9999546876485953
-Difference 1-norm 168.0
-Difference 2-norm 51.264022471905186
-
-underwriting_agreements-1330007-000094366305000388
-
-Vec cosine 0.9998267234434955
-Difference 1-norm 158.0
-Difference 2-norm 44.98888751680797
-
-underwriting_agreements-1491576-000110465914068930
-
-Vec cosine 0.9997815471816006
-Difference 1-norm 94.0
-Difference 2-norm 24.041630560342615
-
-underwriting_agreements-1144519-000110465916157823
-
-Vec cosine 0.9997840800999592
-Difference 1-norm 397.0
-Difference 2-norm 117.80916772475732
-
-credit_contract-1315695-000110465911007794
+Security_Purchase-1001463-000138038917000049
 
 Vec cosine 1.0000000000000002
 Difference 1-norm 0.0
 Difference 2-norm 0.0
 
-credit_contract-1001250-000110465918064317
+Security_Purchase-1025536-000119312508191195
+
+Vec cosine 1.0000000000000002
+Difference 1-norm 0.0
+Difference 2-norm 0.0
+
+Security_Purchase-716778-000147793217000397
+
+Vec cosine 0.9999546876485953
+Difference 1-norm 168.0
+Difference 2-norm 51.264022471905186
+
+Security_Purchase-825322-000149315221004462
+
+Vec cosine 0.9980398959645943
+Difference 1-norm 719.0
+Difference 2-norm 219.8977034895999
+
+Security_Purchase-849636-000149315221010354
+
+Vec cosine 0.9980398959645943
+Difference 1-norm 719.0
+Difference 2-norm 219.8977034895999
+
+SECPA0
+
+Vec cosine 0.9997105357066556
+Difference 1-norm 201.0
+Difference 2-norm 61.652250567193406
+
+Security_Purchase-1009891-000119380517000861
+
+Vec cosine 0.999952173535509
+Difference 1-norm 184.0
+Difference 2-norm 54.772255750516614
+
+Security_Purchase-1040792-000143774917014788
+
+Vec cosine 0.9999919023750333
+Difference 1-norm 4.0
+Difference 2-norm 2.8284271247461903
+
+Security_Purchase-729237-000119312512213442
 
 Vec cosine 1.0000000000000002
 Difference 1-norm 0.0
@@ -226,13 +124,13 @@ Vec cosine 0.9999944524353416
 Difference 1-norm 6.0
 Difference 2-norm 2.449489742783178
 
-credit_contract-1307954-000110465917040215
+credit_contract-1315695-000110465911007794
 
-Vec cosine 0.9999919023750333
-Difference 1-norm 4.0
-Difference 2-norm 2.8284271247461903
+Vec cosine 1.0000000000000002
+Difference 1-norm 0.0
+Difference 2-norm 0.0
 
-credit_contract-1336545-000110465913028036
+credit_contract-1001250-000110465918064317
 
 Vec cosine 1.0000000000000002
 Difference 1-norm 0.0
@@ -256,219 +154,27 @@ Vec cosine 0.9999721306861058
 Difference 1-norm 16.0
 Difference 2-norm 6.324555320336759
 
-agreement_of_plan_and_merger-912183-000104746911009107
-
-Vec cosine 0.9999944524353416
-Difference 1-norm 6.0
-Difference 2-norm 2.449489742783178
-
-agreement_of_plan_and_merger-1047884-000110465920133265
-
-Vec cosine 1.0000000000000002
-Difference 1-norm 0.0
-Difference 2-norm 0.0
-
-agreement_of_plan_and_merger-1499961-000143774921017313
-
-Vec cosine 0.9999546876485953
-Difference 1-norm 168.0
-Difference 2-norm 51.264022471905186
-
-agreement_of_plan_and_merger-1826333-000110465921116164
-
-Vec cosine 1.0000000000000002
-Difference 1-norm 0.0
-Difference 2-norm 0.0
-
-agreement_of_plan_and_merger-1701821-000110465918051763
-
-Vec cosine 0.9999721306861058
-Difference 1-norm 16.0
-Difference 2-norm 6.324555320336759
-
-agreement_of_plan_and_merger-1545772-000114420418017984
-
-Vec cosine 1.0000000000000002
-Difference 1-norm 0.0
-Difference 2-norm 0.0
-
-agreement_of_plan_and_merger-1069353-000129993306006307
-
-Vec cosine 0.9999546876485953
-Difference 1-norm 168.0
-Difference 2-norm 51.264022471905186
-
-agreement_of_plan_and_merger-1539042-000114420413044482
-
-Vec cosine 1.0000000000000002
-Difference 1-norm 0.0
-Difference 2-norm 0.0
-
-agreement_of_plan_and_merger-30419-000119312512493153
-
-Vec cosine 0.9998845177892572
-Difference 1-norm 227.0
-Difference 2-norm 67.69785816405124
-
-agreement_of_plan_and_merger-895930-000119312516623030
+credit_contract-1307954-000110465917040215
 
 Vec cosine 0.9999919023750333
 Difference 1-norm 4.0
 Difference 2-norm 2.8284271247461903
 
-employ_agreement-1328798-000110465915027320
+credit_contract-1336545-000110465913028036
 
 Vec cosine 1.0000000000000002
 Difference 1-norm 0.0
 Difference 2-norm 0.0
 
-employ_agreement-1523526-000121390019016963
-
-Vec cosine 0.9999901080448796
-Difference 1-norm 4.0
-Difference 2-norm 2.8284271247461903
-
-employ_agreement-1347523-000119312515185938
-
-Vec cosine 0.9997637746254024
-Difference 1-norm 399.0
-Difference 2-norm 118.57908753233008
-
-employ_agreement-1519401-000156459020051441
-
-Vec cosine 0.9999546876485953
-Difference 1-norm 168.0
-Difference 2-norm 51.264022471905186
-
-employ_agreement-884624-000156459016016963
-
-Vec cosine 0.9999919023750333
-Difference 1-norm 4.0
-Difference 2-norm 2.8284271247461903
-
-employ_agreement-1415277-000117120012000115
-
-Vec cosine 0.9999919023750333
-Difference 1-norm 4.0
-Difference 2-norm 2.8284271247461903
-
-employ_agreement-1036070-000119312511000688
-
-Vec cosine 0.9999901080448796
-Difference 1-norm 4.0
-Difference 2-norm 2.8284271247461903
-
-employ_agreement-894315-000156459017001905
-
-Vec cosine 0.9998614503837093
-Difference 1-norm 225.0
-Difference 2-norm 68.38859554048467
-
-employ_agreement-1635965-000163596518000015
-
-Vec cosine 0.9997799975970196
-Difference 1-norm 395.0
-Difference 2-norm 118.52847759083046
-
-employ_agreement-1358762-000156459019042512
+trust_agreement-1345264-000116231805001084
 
 Vec cosine 1.0000000000000002
 Difference 1-norm 0.0
 Difference 2-norm 0.0
 
-employ_agreement-773660-000119312512454011
+trust_agreement-1299273-000116231804000494
 
-Vec cosine 0.9999138250200164
-Difference 1-norm 159.0
-Difference 2-norm 47.86439177509728
-
-employ_agreement-1377013-000119312515269291
-
-Vec cosine 0.9997637746254024
-Difference 1-norm 399.0
-Difference 2-norm 118.57908753233008
-
-employ_agreement-932696-000119312513071730
-
-Vec cosine 0.9999409616822914
-Difference 1-norm 172.0
-Difference 2-norm 51.38093031466052
-
-employ_agreement-1080657-000143774921007660
-
-Vec cosine 0.9997799975970196
-Difference 1-norm 395.0
-Difference 2-norm 118.52847759083046
-
-employ_agreement-1501364-000119312514098837
-
-Vec cosine 1.0000000000000002
-Difference 1-norm 0.0
-Difference 2-norm 0.0
-
-indenture_contracts-1392380-000143774920000496
-
-Vec cosine 0.9999546876485953
-Difference 1-norm 168.0
-Difference 2-norm 51.264022471905186
-
-indenture_contracts-1273801-000110465913050145
-
-Vec cosine 0.9987848054765698
-Difference 1-norm 686.0
-Difference 2-norm 209.60916010518244
-
-indenture_contracts-812074-000110465910040529
-
-Vec cosine 0.9982097179157016
-Difference 1-norm 745.0
-Difference 2-norm 226.12607103118384
-
-indenture_contracts-1616543-000110465919042301
-
-Vec cosine 0.9999546876485953
-Difference 1-norm 168.0
-Difference 2-norm 51.264022471905186
-
-indenture_contracts-1492966-000110465915087541
-
-Vec cosine 0.9999546876485953
-Difference 1-norm 168.0
-Difference 2-norm 51.264022471905186
-
-indenture_contracts-1326160-000110465917050945
-
-Vec cosine 0.9959967077148935
-Difference 1-norm 887.0
-Difference 2-norm 270.99630993797683
-
-indenture_contracts-1358651-000091205719000252
-
-Vec cosine 0.9987848054765698
-Difference 1-norm 686.0
-Difference 2-norm 209.60916010518244
-
-indenture_contracts-1328091-000119312506076313
-
-Vec cosine 0.9998845177892572
-Difference 1-norm 227.0
-Difference 2-norm 67.69785816405124
-
-indenture_contracts-28630-000110465906006276
-
-Vec cosine 0.9987848054765698
-Difference 1-norm 686.0
-Difference 2-norm 209.60916010518244
-
-indenture_contracts-1333141-000104746914008795
-
-Vec cosine 0.9975448498917353
-Difference 1-norm 887.0
-Difference 2-norm 270.99630993797683
-
-trust_agreement-1435967-000111650209001121
-
-Vec cosine 1.0000000000000002
+Vec cosine 0.9999999999999999
 Difference 1-norm 0.0
 Difference 2-norm 0.0
 
@@ -478,27 +184,33 @@ Vec cosine 0.9998845177892572
 Difference 1-norm 227.0
 Difference 2-norm 67.69785816405124
 
+trust_agreement-1435967-000111650209001122
+
+Vec cosine 1.0000000000000002
+Difference 1-norm 0.0
+Difference 2-norm 0.0
+
+trust_agreement-1435967-000111650209001121
+
+Vec cosine 1.0000000000000002
+Difference 1-norm 0.0
+Difference 2-norm 0.0
+
 trust_agreement-1002813-000100281302000010
 
 Vec cosine 0.999288626250463
 Difference 1-norm 518.0
 Difference 2-norm 158.6379525838631
 
-trust_agreement-1345264-000116231805001084
+trust_agreement-1217017-000116231803000049
 
-Vec cosine 1.0000000000000002
-Difference 1-norm 0.0
-Difference 2-norm 0.0
+Vec cosine 0.9999546876485953
+Difference 1-norm 168.0
+Difference 2-norm 51.264022471905186
 
-trust_agreement-1313234-000116231805000029
+trust_agreement-1225289-000116231803000141
 
-Vec cosine 0.9997799975970196
-Difference 1-norm 395.0
-Difference 2-norm 118.52847759083046
-
-trust_agreement-1435967-000111650209001122
-
-Vec cosine 1.0000000000000002
+Vec cosine 0.9999999999999999
 Difference 1-norm 0.0
 Difference 2-norm 0.0
 
@@ -508,47 +220,71 @@ Vec cosine 0.9997799975970196
 Difference 1-norm 395.0
 Difference 2-norm 118.52847759083046
 
-trust_agreement-1225289-000116231803000141
+trust_agreement-1313234-000116231805000029
 
-Vec cosine 0.9999999999999999
-Difference 1-norm 0.0
-Difference 2-norm 0.0
+Vec cosine 0.9997799975970196
+Difference 1-norm 395.0
+Difference 2-norm 118.52847759083046
 
-trust_agreement-1217017-000116231803000049
+SPA2
 
-Vec cosine 0.9999546876485953
-Difference 1-norm 168.0
-Difference 2-norm 51.264022471905186
+Vec cosine 0.9978602301598547
+Difference 1-norm 405.0
+Difference 2-norm 117.55424279880332
 
-trust_agreement-1299273-000116231804000494
+SPA5
 
-Vec cosine 0.9999999999999999
-Difference 1-norm 0.0
-Difference 2-norm 0.0
+Vec cosine 0.9998748620816714
+Difference 1-norm 205.0
+Difference 2-norm 61.74949392505172
 
-registration_rights_contracts-1567529-000121390020001409
+SPA6
 
-Vec cosine 0.9967428628780386
-Difference 1-norm 719.0
-Difference 2-norm 219.8977034895999
-
-registration_rights_contracts-1011835-000119312505001000
-
-Vec cosine 1.0000000000000002
-Difference 1-norm 0.0
-Difference 2-norm 0.0
-
-registration_rights_contracts-1158172-000119312521004725
-
-Vec cosine 0.9998845177892572
+Vec cosine 0.9993860152114311
 Difference 1-norm 227.0
 Difference 2-norm 67.69785816405124
 
-registration_rights_contracts-1708410-000149315221022128
+SPA9
 
-Vec cosine 0.9998154488036682
-Difference 1-norm 168.0
-Difference 2-norm 51.264022471905186
+Vec cosine 0.9997105357066556
+Difference 1-norm 201.0
+Difference 2-norm 61.652250567193406
+
+SPA7
+
+Vec cosine 0.9996439793307804
+Difference 1-norm 428.0
+Difference 2-norm 128.77111477346153
+
+SPA3
+
+Vec cosine 0.9999174760958829
+Difference 1-norm 201.0
+Difference 2-norm 61.652250567193406
+
+SPA8
+
+Vec cosine 0.9992869433464556
+Difference 1-norm 239.0
+Difference 2-norm 66.70082458260917
+
+SPA4
+
+Vec cosine 0.9998531521279339
+Difference 1-norm 201.0
+Difference 2-norm 61.652250567193406
+
+SPA1
+
+Vec cosine 0.9996334690669939
+Difference 1-norm 180.0
+Difference 2-norm 47.853944456021594
+
+SPA0
+
+Vec cosine 0.9995909693345875
+Difference 1-norm 70.0
+Difference 2-norm 13.638181696985855
 
 registration_rights_contracts-1352819-000119312507254768
 
@@ -556,21 +292,33 @@ Vec cosine 0.9975448498917353
 Difference 1-norm 887.0
 Difference 2-norm 270.99630993797683
 
-registration_rights_contracts-894871-000089487100500005
+registration_rights_contracts-1708410-000149315221022128
+
+Vec cosine 0.9998154488036682
+Difference 1-norm 168.0
+Difference 2-norm 51.264022471905186
+
+registration_rights_contracts-1752836-000119312520131151
+
+Vec cosine 0.9999919023750333
+Difference 1-norm 4.0
+Difference 2-norm 2.8284271247461903
+
+registration_rights_contracts-1011835-000119312505001000
 
 Vec cosine 1.0000000000000002
 Difference 1-norm 0.0
 Difference 2-norm 0.0
 
-registration_rights_contracts-1723089-000119312518130047
-
-Vec cosine 0.9997799975970196
-Difference 1-norm 395.0
-Difference 2-norm 118.52847759083046
-
 registration_rights_contracts-1521847-000119312514269228
 
 Vec cosine 0.9999999999999999
+Difference 1-norm 0.0
+Difference 2-norm 0.0
+
+registration_rights_contracts-1717556-000114420418048323
+
+Vec cosine 1.0
 Difference 1-norm 0.0
 Difference 2-norm 0.0
 
@@ -586,23 +334,35 @@ Vec cosine 0.9985760118881629
 Difference 1-norm 723.0
 Difference 2-norm 219.934081033386
 
-registration_rights_contracts-1717556-000114420418048323
-
-Vec cosine 1.0
-Difference 1-norm 0.0
-Difference 2-norm 0.0
-
 registration_rights_contracts-888693-000095013702005552
 
 Vec cosine 1.0000000000000002
 Difference 1-norm 0.0
 Difference 2-norm 0.0
 
-registration_rights_contracts-1752836-000119312520131151
+registration_rights_contracts-1158172-000119312521004725
 
-Vec cosine 0.9999919023750333
-Difference 1-norm 4.0
-Difference 2-norm 2.8284271247461903
+Vec cosine 0.9998845177892572
+Difference 1-norm 227.0
+Difference 2-norm 67.69785816405124
+
+registration_rights_contracts-894871-000089487100500005
+
+Vec cosine 1.0000000000000002
+Difference 1-norm 0.0
+Difference 2-norm 0.0
+
+registration_rights_contracts-1567529-000121390020001409
+
+Vec cosine 0.9967428628780386
+Difference 1-norm 719.0
+Difference 2-norm 219.8977034895999
+
+registration_rights_contracts-1723089-000119312518130047
+
+Vec cosine 0.9997799975970196
+Difference 1-norm 395.0
+Difference 2-norm 118.52847759083046
 
 SA0
 
@@ -616,59 +376,287 @@ Vec cosine 0.9967428628780386
 Difference 1-norm 719.0
 Difference 2-norm 219.8977034895999
 
-PA5
+employ_agreement-1635965-000163596518000015
 
-Vec cosine 1.0000000000000002
-Difference 1-norm 0.0
-Difference 2-norm 0.0
+Vec cosine 0.9997799975970196
+Difference 1-norm 395.0
+Difference 2-norm 118.52847759083046
 
-PA4
-
-Vec cosine 0.9997961110129817
-Difference 1-norm 172.0
-Difference 2-norm 51.38093031466052
-
-PA3
-
-Vec cosine 0.9988063880205262
-Difference 1-norm 369.0
-Difference 2-norm 112.88489712977551
-
-PA0
-
-Vec cosine 0.9967428628780386
-Difference 1-norm 719.0
-Difference 2-norm 219.8977034895999
-
-PA2
-
-Vec cosine 0.9980398959645943
-Difference 1-norm 719.0
-Difference 2-norm 219.8977034895999
-
-PA1
-
-Vec cosine 1.0000000000000002
-Difference 1-norm 0.0
-Difference 2-norm 0.0
-
-agreements-1548981-000119312513179715
+employ_agreement-932696-000119312513071730
 
 Vec cosine 0.9999409616822914
 Difference 1-norm 172.0
 Difference 2-norm 51.38093031466052
 
-agreements-1550935-000155837019006682
+employ_agreement-1358762-000156459019042512
 
-Vec cosine 1.0
+Vec cosine 1.0000000000000002
 Difference 1-norm 0.0
 Difference 2-norm 0.0
 
-agreements-939934-000110465905035446
+employ_agreement-1519401-000156459020051441
 
-Vec cosine 0.9999999999999998
+Vec cosine 0.9999546876485953
+Difference 1-norm 168.0
+Difference 2-norm 51.264022471905186
+
+employ_agreement-1036070-000119312511000688
+
+Vec cosine 0.9999901080448796
+Difference 1-norm 4.0
+Difference 2-norm 2.8284271247461903
+
+employ_agreement-1080657-000143774921007660
+
+Vec cosine 0.9997799975970196
+Difference 1-norm 395.0
+Difference 2-norm 118.52847759083046
+
+employ_agreement-894315-000156459017001905
+
+Vec cosine 0.9998614503837093
+Difference 1-norm 225.0
+Difference 2-norm 68.38859554048467
+
+employ_agreement-773660-000119312512454011
+
+Vec cosine 0.9999138250200164
+Difference 1-norm 159.0
+Difference 2-norm 47.86439177509728
+
+employ_agreement-1501364-000119312514098837
+
+Vec cosine 1.0000000000000002
 Difference 1-norm 0.0
 Difference 2-norm 0.0
+
+employ_agreement-1328798-000110465915027320
+
+Vec cosine 1.0000000000000002
+Difference 1-norm 0.0
+Difference 2-norm 0.0
+
+employ_agreement-1347523-000119312515185938
+
+Vec cosine 0.9997637746254024
+Difference 1-norm 399.0
+Difference 2-norm 118.57908753233008
+
+employ_agreement-884624-000156459016016963
+
+Vec cosine 0.9999919023750333
+Difference 1-norm 4.0
+Difference 2-norm 2.8284271247461903
+
+employ_agreement-1523526-000121390019016963
+
+Vec cosine 0.9999901080448796
+Difference 1-norm 4.0
+Difference 2-norm 2.8284271247461903
+
+employ_agreement-1377013-000119312515269291
+
+Vec cosine 0.9997637746254024
+Difference 1-norm 399.0
+Difference 2-norm 118.57908753233008
+
+employ_agreement-1415277-000117120012000115
+
+Vec cosine 0.9999919023750333
+Difference 1-norm 4.0
+Difference 2-norm 2.8284271247461903
+
+agreement_of_plan_and_merger-30419-000119312512493153
+
+Vec cosine 0.9998845177892572
+Difference 1-norm 227.0
+Difference 2-norm 67.69785816405124
+
+agreement_of_plan_and_merger-1539042-000114420413044482
+
+Vec cosine 1.0000000000000002
+Difference 1-norm 0.0
+Difference 2-norm 0.0
+
+agreement_of_plan_and_merger-912183-000104746911009107
+
+Vec cosine 0.9999944524353416
+Difference 1-norm 6.0
+Difference 2-norm 2.449489742783178
+
+agreement_of_plan_and_merger-1545772-000114420418017984
+
+Vec cosine 1.0000000000000002
+Difference 1-norm 0.0
+Difference 2-norm 0.0
+
+agreement_of_plan_and_merger-1826333-000110465921116164
+
+Vec cosine 1.0000000000000002
+Difference 1-norm 0.0
+Difference 2-norm 0.0
+
+agreement_of_plan_and_merger-1047884-000110465920133265
+
+Vec cosine 1.0000000000000002
+Difference 1-norm 0.0
+Difference 2-norm 0.0
+
+agreement_of_plan_and_merger-1069353-000129993306006307
+
+Vec cosine 0.9999546876485953
+Difference 1-norm 168.0
+Difference 2-norm 51.264022471905186
+
+agreement_of_plan_and_merger-895930-000119312516623030
+
+Vec cosine 0.9999919023750333
+Difference 1-norm 4.0
+Difference 2-norm 2.8284271247461903
+
+agreement_of_plan_and_merger-1499961-000143774921017313
+
+Vec cosine 0.9999546876485953
+Difference 1-norm 168.0
+Difference 2-norm 51.264022471905186
+
+agreement_of_plan_and_merger-1701821-000110465918051763
+
+Vec cosine 0.9999721306861058
+Difference 1-norm 16.0
+Difference 2-norm 6.324555320336759
+
+underwriting_agreements-1330007-000094366305000388
+
+Vec cosine 0.9998267234434955
+Difference 1-norm 158.0
+Difference 2-norm 44.98888751680797
+
+underwriting_agreements-1020569-000110465912056704
+
+Vec cosine 0.9998617497820135
+Difference 1-norm 77.0
+Difference 2-norm 19.313207915827967
+
+underwriting_agreements-47217-000119312511250713
+
+Vec cosine 0.9999546876485953
+Difference 1-norm 168.0
+Difference 2-norm 51.264022471905186
+
+underwriting_agreements-1491576-000110465914068930
+
+Vec cosine 0.9997815471816006
+Difference 1-norm 94.0
+Difference 2-norm 24.041630560342615
+
+underwriting_agreements-912892-000110465919031794
+
+Vec cosine 0.9999546876485953
+Difference 1-norm 168.0
+Difference 2-norm 51.264022471905186
+
+underwriting_agreements-1144519-000110465916157823
+
+Vec cosine 0.9997840800999592
+Difference 1-norm 397.0
+Difference 2-norm 117.80916772475732
+
+underwriting_agreements-1451505-000110465912063229
+
+Vec cosine 0.9987848054765698
+Difference 1-norm 686.0
+Difference 2-norm 209.60916010518244
+
+underwriting_agreements-769218-000110465912005256
+
+Vec cosine 0.9999403188612713
+Difference 1-norm 168.0
+Difference 2-norm 49.59838707054898
+
+underwriting_agreements-1465128-000110465917020013
+
+Vec cosine 0.9999827501541789
+Difference 1-norm 6.0
+Difference 2-norm 4.242640687119285
+
+underwriting_agreements-1253986-000110465917068004
+
+Vec cosine 0.9999403188612713
+Difference 1-norm 168.0
+Difference 2-norm 49.59838707054898
+
+underwriting_agreements-101829-000119312507160808
+
+Vec cosine 0.9991790552567491
+Difference 1-norm 530.0
+Difference 2-norm 160.14368548275638
+
+indenture_contracts-1616543-000110465919042301
+
+Vec cosine 0.9999546876485953
+Difference 1-norm 168.0
+Difference 2-norm 51.264022471905186
+
+indenture_contracts-1358651-000091205719000252
+
+Vec cosine 0.9987848054765698
+Difference 1-norm 686.0
+Difference 2-norm 209.60916010518244
+
+indenture_contracts-1333141-000104746914008795
+
+Vec cosine 0.9975448498917353
+Difference 1-norm 887.0
+Difference 2-norm 270.99630993797683
+
+indenture_contracts-1273801-000110465913050145
+
+Vec cosine 0.9987848054765698
+Difference 1-norm 686.0
+Difference 2-norm 209.60916010518244
+
+indenture_contracts-1492966-000110465915087541
+
+Vec cosine 0.9999546876485953
+Difference 1-norm 168.0
+Difference 2-norm 51.264022471905186
+
+indenture_contracts-1392380-000143774920000496
+
+Vec cosine 0.9999546876485953
+Difference 1-norm 168.0
+Difference 2-norm 51.264022471905186
+
+indenture_contracts-812074-000110465910040529
+
+Vec cosine 0.9982097179157016
+Difference 1-norm 745.0
+Difference 2-norm 226.12607103118384
+
+indenture_contracts-1326160-000110465917050945
+
+Vec cosine 0.9959967077148935
+Difference 1-norm 887.0
+Difference 2-norm 270.99630993797683
+
+indenture_contracts-1328091-000119312506076313
+
+Vec cosine 0.9998845177892572
+Difference 1-norm 227.0
+Difference 2-norm 67.69785816405124
+
+indenture_contracts-28630-000110465906006276
+
+Vec cosine 0.9987848054765698
+Difference 1-norm 686.0
+Difference 2-norm 209.60916010518244
+
+agreements-1415921-000119312521102245
+
+Vec cosine 0.9997814952529422
+Difference 1-norm 55.0
+Difference 2-norm 17.97220075561143
 
 agreements-1175483-000119312512295114
 
@@ -679,6 +667,18 @@ Difference 2-norm 0.0
 agreements-1513761-000110465921026456
 
 Vec cosine 1.0000000000000002
+Difference 1-norm 0.0
+Difference 2-norm 0.0
+
+agreements-939934-000110465905035446
+
+Vec cosine 0.9999999999999998
+Difference 1-norm 0.0
+Difference 2-norm 0.0
+
+agreements-1550935-000155837019006682
+
+Vec cosine 1.0
 Difference 1-norm 0.0
 Difference 2-norm 0.0
 
@@ -694,15 +694,15 @@ Vec cosine 0.9995977565434334
 Difference 1-norm 227.0
 Difference 2-norm 67.69785816405124
 
-agreements-1415921-000119312521102245
-
-Vec cosine 0.9997814952529422
-Difference 1-norm 55.0
-Difference 2-norm 17.97220075561143
-
 agreements-1140019-000110465921058768
 
 Vec cosine 0.998501552366062
 Difference 1-norm 384.0
 Difference 2-norm 115.36897329871667
+
+agreements-1548981-000119312513179715
+
+Vec cosine 0.9999409616822914
+Difference 1-norm 172.0
+Difference 2-norm 51.38093031466052
 

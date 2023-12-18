@@ -8,6 +8,16 @@ Currenty support a trivial calculation of Solidity(5.x) similarity
 
 ## Usage
 
+Batch eval (recommended).
+
+```bash
+cd src/main
+python3 batch_Deckard.py > test_case/batch_similarity.txt
+python3 similarity_result_extract.py
+```
+
+Single eval.
+
 ```bash
 
 cd src/main
