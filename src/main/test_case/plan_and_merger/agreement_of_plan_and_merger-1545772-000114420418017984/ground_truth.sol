@@ -25,12 +25,12 @@ contract PlanAndMergerAgreement_4 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1521993600;
+        EffectiveTime = 1522022400;
         CloseTime = 1000;
-        OutSideClosingDate = 1537891200;
+        OutSideClosingDate = 1537920000;
         sellerName = "GGP Inc.";
         seller = address(0);
-        buyerName =["Goldfinch Merger Sub Corp."];
+        buyerName =["Brookfield Property Partners L.P."];
         buyer =[address(0)];
     }
     function pay_0() public payable {

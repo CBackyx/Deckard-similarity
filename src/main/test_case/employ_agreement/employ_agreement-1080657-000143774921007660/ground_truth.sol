@@ -25,7 +25,7 @@ contract undefined_1 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1508256000;
+        EffectiveTime = 1508284800;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
         sellerName = "Jack K. Heilbron";
@@ -46,28 +46,10 @@ contract undefined_1 {
         pricePayedByBuyer[0] += price;
         state[0] = State.Locked;
     }
-    function purchaseConfirm(uint32 buyerIndex) public {
-        require(buyerIndex < buyer.length);
-        if(msg.sender == seller) {
-            purchaseSellerConfirmed[buyerIndex] = true;
-            return;
-        }
-        uint buyerNum = buyerName.length;
-        for(uint i = 0;
-        i < buyerNum;
-        i ++) {
-            if(msg.sender == buyer[i]) {
-                purchaseBuyerConfirmed[i] = true;
-                return;
-            }
-        }
-    }
     function payRelease_0() public {
         require(msg.sender == buyer[0]);
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
-        require(purchaseBuyerConfirmed[0]);
-        require(purchaseSellerConfirmed[0]);
         emit Released(0);
         state[0] = State.Release;
         seller.transfer(pricePayedByBuyer[0]);

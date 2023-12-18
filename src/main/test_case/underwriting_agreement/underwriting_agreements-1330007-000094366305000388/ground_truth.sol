@@ -28,7 +28,7 @@ contract UnderwritingAgreement_4 {
         EffectiveTime = 1000;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "Wachovia Commercial Mortgage Securities, Inc.";
+        sellerName = "Wachovia Bank";
         seller = address(0);
         buyerName =[""];
         buyer =[address(0)];
@@ -133,6 +133,18 @@ contract UnderwritingAgreement_4 {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
+    }
+    function terminateByOutOfDate() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime >= OutSideClosingDate);
+        emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

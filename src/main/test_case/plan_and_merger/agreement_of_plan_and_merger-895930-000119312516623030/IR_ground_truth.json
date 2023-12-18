@@ -1,10 +1,11 @@
 {
     "ContractCategory": "",
     "SellerName": [
-        "Envision Healthcare Holdings, Inc."
+        "New Amethyst Corp."
     ],
     "BuyerName": [
-        "New Amethyst Corp."
+        "Envision Healthcare Holdings, Inc."
+
     ],
     "EffectiveTime": [
         "June 15, 2016"
@@ -16,10 +17,10 @@
     "Payments": [
         {
             "From": [
-                "New Amethyst Corp."
+                "Envision Healthcare Holdings, Inc."
             ],
             "To": [
-                "Envision Healthcare Holdings, Inc."
+                "New Amethyst Corp."
             ],
             "PurchasePrice": "",
             "TimeLimit": {

@@ -25,7 +25,7 @@ contract undefined_2 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1247500800;
+        EffectiveTime = 1247529600;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
         sellerName = "Don Marcos Trading Co.";

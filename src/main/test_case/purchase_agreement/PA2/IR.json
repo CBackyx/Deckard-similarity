@@ -1,39 +1,38 @@
 {
+    "ContractCategory": "StockPurchaseAgreement",
+    "SellerName": [
+        "VW CREDIT"
+    ],
     "BuyerName": [
         "VOLKSWAGEN AUTO LEASE/LOAN UNDERWRITTEN FUNDING"
     ],
-    "CloseTime": [
-        ""
-    ],
-    "ContractCategory": "PurchaseAgreement",
     "EffectiveTime": [
         "May\u00a019, 2020"
     ],
+    "CloseTime": [],
     "OutSideClosingDate": [],
     "Payments": [
         {
             "From": [
                 "VOLKSWAGEN AUTO LEASE/LOAN UNDERWRITTEN FUNDING"
             ],
-            "PurchasePrice": "1290803105.57",
-            "TimeLimit": {
-                "leftOp": "now",
-                "operator": "<=",
-                "rightOp": "CloseTime"
-            },
             "To": [
-                "VW Credit"
+                "VW CREDIT"
             ],
+            "TimeLimit": {
+                "operator": "<=",
+                "leftOp": "now",
+                "rightOp": "CloseTime",
+                "disabled": false
+            },
+            "PurchasePrice": 1290803105.57,
             "Transfer": true
         }
     ],
-    "SellerName": [
-        "VW Credit"
-    ],
+    "Transfers": true,
     "Terminations": {
-        "OtherTermination": true,
+        "TransferTermination": true,
         "OutOfDateTermination": false,
-        "TransferTermination": false
-    },
-    "Transfers": true
+        "OtherTermination": true
+    }
 }

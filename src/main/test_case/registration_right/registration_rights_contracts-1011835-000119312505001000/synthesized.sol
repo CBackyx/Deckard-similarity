@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract RegistrationRightAgreement1_synthesized {
+contract RegistrationRightAgreement_1 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,12 +25,12 @@ contract RegistrationRightAgreement1_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = -30610224000;
-        CloseTime = -30610224000;
-        OutSideClosingDate = -30610224000;
-        sellerName = "Medivation, Inc.";
+        EffectiveTime = 1103241600;
+        CloseTime = 1000;
+        OutSideClosingDate = 1107993600;
+        sellerName = "Medivation";
         seller = address(0);
-        buyerName =["Orion Acquisition Corp."];
+        buyerName =["(“Stockholder”)."];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,7 +39,7 @@ contract RegistrationRightAgreement1_synthesized {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 1000;
+        uint256 price = 1900000;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);
@@ -133,6 +133,18 @@ contract RegistrationRightAgreement1_synthesized {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
+    }
+    function terminateByOutOfDate() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime >= OutSideClosingDate);
+        emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

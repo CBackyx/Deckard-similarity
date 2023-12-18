@@ -25,7 +25,7 @@ contract MiscAgreement_6 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1614787200;
+        EffectiveTime = 1614816000;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
         sellerName = "MANCHESTER UNITED FOOTBALL CLUB LIMITED";

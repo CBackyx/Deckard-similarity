@@ -25,12 +25,12 @@ contract PlanAndMergerAgreement_8 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1465920000;
+        EffectiveTime = 1465948800;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "Envision Healthcare Holdings, Inc.";
+        sellerName = "New Amethyst Corp.";
         seller = address(0);
-        buyerName =["New Amethyst Corp."];
+        buyerName =["Envision Healthcare Holdings, Inc."];
         buyer =[address(0)];
     }
     function pay_0() public payable {

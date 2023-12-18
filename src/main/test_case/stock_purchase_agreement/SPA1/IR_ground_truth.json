@@ -3,7 +3,7 @@
         "Centrue Financial Corporation"
     ],
     "BuyerName": [
-        "undersigned entity"
+        "Investor"
     ],
     "EffectiveTime": [
         "March 30, 2015"
@@ -15,7 +15,7 @@
     "Payments": [
         {
             "From": [
-                "undersigned entity"
+                "Investor"
             ],
             "To": [
                 "Centrue Financial Corporation"
@@ -31,7 +31,7 @@
     ],
     "Transfers": false,
     "Terminations": {
-        "OtherTermination": false,
+        "OtherTermination": true,
         "OutOfDateTermination": false,
         "TransferTermination": true
     }

@@ -2,3 +2,4 @@
 *.d
 *.a
 *.pyc
+**test_case/

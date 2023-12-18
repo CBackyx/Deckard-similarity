@@ -1,39 +1,38 @@
 {
+    "ContractCategory": "StockPurchaseAgreement",
+    "SellerName": [
+        "Armada Enterprises GP"
+    ],
     "BuyerName": [
         "MC 2 Consulting"
     ],
-    "CloseTime": [
-        ""
-    ],
-    "ContractCategory": "StockPurchaseAgreement",
     "EffectiveTime": [
         "5th  May, 2016,"
     ],
+    "CloseTime": [],
     "OutSideClosingDate": [],
     "Payments": [
         {
             "From": [
                 "MC 2 Consulting"
             ],
-            "PurchasePrice": "50000",
-            "TimeLimit": {
-                "leftOp": "now",
-                "operator": "<=",
-                "rightOp": "CloseTime"
-            },
             "To": [
                 "Armada Enterprises GP"
             ],
-            "Transfer": false
+            "TimeLimit": {
+                "operator": "<=",
+                "leftOp": "now",
+                "rightOp": "CloseTime",
+                "disabled": false
+            },
+            "PurchasePrice": 50000,
+            "Transfer": true
         }
     ],
-    "SellerName": [
-        "Armada Enterprises GP"
-    ],
+    "Transfers": true,
     "Terminations": {
-        "OtherTermination": false,
+        "TransferTermination": true,
         "OutOfDateTermination": false,
-        "TransferTermination": true
-    },
-    "Transfers": true
+        "OtherTermination": true
+    }
 }

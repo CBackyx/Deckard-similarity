@@ -25,7 +25,7 @@ contract undefined_9 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1257091200;
+        EffectiveTime = 1257120000;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
         sellerName = "Location Based Technologies, Inc.";

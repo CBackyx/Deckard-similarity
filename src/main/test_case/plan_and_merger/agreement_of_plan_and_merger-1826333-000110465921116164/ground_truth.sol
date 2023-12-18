@@ -25,12 +25,12 @@ contract PlanAndMergerAgreement_6 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1631721600;
+        EffectiveTime = 1631750400;
         CloseTime = 1000;
-        OutSideClosingDate = 1648656000;
+        OutSideClosingDate = 1648684800;
         sellerName = "Gogoro Inc.";
         seller = address(0);
-        buyerName =["Starship Merger Sub I Limited"];
+        buyerName =["Poema Global Holdings Corp."];
         buyer =[address(0)];
     }
     function pay_0() public payable {

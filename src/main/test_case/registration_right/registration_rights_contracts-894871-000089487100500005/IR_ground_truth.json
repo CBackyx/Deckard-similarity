@@ -1,10 +1,10 @@
 {
     "ContractCategory": "RegistrationRightAgreement",
     "SellerName": [
-        "Integrated Surgical Systems, Inc."
+        "Integrated Surgical Systems"
     ],
     "BuyerName": [
-        ""
+        "Investor"
     ],
     "EffectiveTime": [
         "August 17, 2000"
@@ -18,10 +18,10 @@
     "Payments": [
         {
             "From": [
-                ""
+                "Investor"
             ],
             "To": [
-                "Integrated Surgical Systems, Inc."
+                "Integrated Surgical Systems"
             ],
             "PurchasePrice": "1200000",
             "TimeLimit": {

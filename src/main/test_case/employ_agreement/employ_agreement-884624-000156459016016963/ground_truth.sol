@@ -25,9 +25,9 @@ contract undefined_12 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1375286400;
+        EffectiveTime = 1375315200;
         CloseTime = 1000;
-        OutSideClosingDate = 1404144000;
+        OutSideClosingDate = 1404172800;
         sellerName = "Raymond Fujikawa";
         seller = address(0);
         buyerName =["Orthofix Inc."];

@@ -25,12 +25,12 @@ contract PlanAndMergerAgreement_1 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1159200000;
+        EffectiveTime = 1159228800;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
         sellerName = "Jazz Semiconductor, Inc.";
         seller = address(0);
-        buyerName =["Joy Acquisition Corp."];
+        buyerName =["Acquicor Technology Inc."];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -133,6 +133,18 @@ contract PlanAndMergerAgreement_1 {
         emit Terminated(buyerIndex);
         state[buyerIndex] = State.Inactive;
         buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
+    }
+    function terminateByOutOfDate() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime >= OutSideClosingDate);
+        emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

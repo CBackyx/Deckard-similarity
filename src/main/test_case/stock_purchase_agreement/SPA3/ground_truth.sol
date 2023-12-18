@@ -25,12 +25,12 @@ contract undefined_3 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1616947200;
+        EffectiveTime = 1616976000;
         CloseTime = 1000;
-        OutSideClosingDate = 1617120000;
-        sellerName = "BIOCARDIA, INC.";
+        OutSideClosingDate = 1617148800;
+        sellerName = "BIOCARDIA";
         seller = address(0);
-        buyerName =["LINCOLN PARK CAPITAL FUND, LLC"];
+        buyerName =["LINCOLN PARK CAPITAL FUND"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -138,6 +138,20 @@ contract undefined_3 {
         uint currentTime = oracle.getTime();
         require(currentTime >= OutSideClosingDate);
         emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
+    }
+    function terminateByOthers() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime);
+        bool conditionState = oracle.getConditionState();
+        require(conditionState);
+        emit TerminatedByOthers();
         uint buyerNum = buyerName.length;
         for(uint i = 0;
         i < buyerNum;

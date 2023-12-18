@@ -25,7 +25,7 @@ contract undefined_0 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1317657600;
+        EffectiveTime = 1317686400;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
         sellerName = "Entech Solar";
@@ -73,6 +73,20 @@ contract undefined_0 {
         }
         require(validSender);
         fileHashMap[fileName] = hashCode;
+    }
+    function terminateByOthers() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime);
+        bool conditionState = oracle.getConditionState();
+        require(conditionState);
+        emit TerminatedByOthers();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function close() public {
         uint currentTime = oracle.getTime();

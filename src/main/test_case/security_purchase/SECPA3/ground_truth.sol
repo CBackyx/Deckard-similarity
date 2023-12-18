@@ -25,12 +25,12 @@ contract SecurityPurchaseAgreement_3 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1617724800;
+        EffectiveTime = 1617753600;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
         sellerName = "G Medical Innovations Holdings Ltd.";
         seller = address(0);
-        buyerName =[""];
+        buyerName =["Purchasers"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

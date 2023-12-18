@@ -25,10 +25,10 @@ contract PurchaseAgreement_2 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1589817600;
+        EffectiveTime = 1589846400;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "VW Credit";
+        sellerName = "VW CREDIT";
         seller = address(0);
         buyerName =["VOLKSWAGEN AUTO LEASE/LOAN UNDERWRITTEN FUNDING"];
         buyer =[address(0)];
@@ -91,6 +91,48 @@ contract PurchaseAgreement_2 {
         }
         require(validSender);
         fileHashMap[fileName] = hashCode;
+    }
+    function terminateConfirm(uint32 buyerIndex) public {
+        require(buyerIndex < buyer.length);
+        if(msg.sender == seller) {
+            terminateSellerConfirmed[buyerIndex] = true;
+            return;
+        }
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            if(msg.sender == buyer[i]) {
+                terminateBuyerConfirmed[i] = true;
+                return;
+            }
+        }
+    }
+    function terminateByTransfer(uint buyerIndex) public {
+        bool validSender = false;
+        if(msg.sender == seller) {
+            validSender = true;
+        }
+        else {
+            uint buyerNum = buyerName.length;
+            for(uint i = 0;
+            i < buyerNum;
+            i ++) {
+                if(msg.sender == buyer[i]) {
+                    validSender = true;
+                    buyerIndex = i;
+                    break;
+                }
+            }
+        }
+        require(validSender);
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime);
+        require(terminateSellerConfirmed[buyerIndex]);
+        require(terminateBuyerConfirmed[buyerIndex]);
+        emit Terminated(buyerIndex);
+        state[buyerIndex] = State.Inactive;
+        buyer[buyerIndex].transfer(pricePayedByBuyer[buyerIndex]);
     }
     function terminateByOthers() public {
         uint currentTime = oracle.getTime();

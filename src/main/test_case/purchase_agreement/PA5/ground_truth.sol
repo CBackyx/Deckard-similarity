@@ -27,8 +27,8 @@ contract PurchaseAgreement_5 {
     constructor() public payable {
         EffectiveTime = 1000;
         CloseTime = 1000;
-        OutSideClosingDate = 1370016000;
-        sellerName = "";
+        OutSideClosingDate = 1370044800;
+        sellerName = "RANGE TEXAS PRODUCTION";
         seller = address(0);
         buyerName =["VANGUARD PERMIAN LLC"];
         buyer =[address(0)];
@@ -138,6 +138,20 @@ contract PurchaseAgreement_5 {
         uint currentTime = oracle.getTime();
         require(currentTime >= OutSideClosingDate);
         emit TerminatedByOutOfDate();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
+    }
+    function terminateByOthers() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime);
+        bool conditionState = oracle.getConditionState();
+        require(conditionState);
+        emit TerminatedByOthers();
         uint buyerNum = buyerName.length;
         for(uint i = 0;
         i < buyerNum;

@@ -1,41 +1,40 @@
 {
-    "BuyerName": [
+    "ContractCategory": "StockPurchaseAgreement",
+    "SellerName": [
         "BROOKLYN IMMUNOTHERAPEUTICS"
     ],
-    "CloseTime": [
-        ""
+    "BuyerName": [
+        "LINCOLN PARK CAPITAL FUND"
     ],
-    "ContractCategory": "PurchaseAgreement",
     "EffectiveTime": [
         "April 26, 2021,"
     ],
+    "CloseTime": [],
     "OutSideClosingDate": [
         "July 31, 2021"
     ],
     "Payments": [
         {
             "From": [
-                "BROOKLYN IMMUNOTHERAPEUTICS"
+                "LINCOLN PARK CAPITAL FUND"
             ],
-            "PurchasePrice": "20000000",
-            "TimeLimit": {
-                "leftOp": "now",
-                "operator": "<=",
-                "rightOp": "CloseTime"
-            },
             "To": [
                 "BROOKLYN IMMUNOTHERAPEUTICS"
             ],
+            "TimeLimit": {
+                "operator": "<=",
+                "leftOp": "now",
+                "rightOp": "CloseTime",
+                "disabled": false
+            },
+            "PurchasePrice": 20000000,
             "Transfer": true
         }
     ],
-    "SellerName": [
-        "BROOKLYN IMMUNOTHERAPEUTICS"
-    ],
+    "Transfers": true,
     "Terminations": {
-        "OtherTermination": true,
-        "OutOfDateTermination": false,
-        "TransferTermination": true
-    },
-    "Transfers": true
+        "TransferTermination": true,
+        "OutOfDateTermination": true,
+        "OtherTermination": true
+    }
 }

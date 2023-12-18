@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined6_synthesized {
+contract PlanAndMergerAgreement_6 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,12 +25,12 @@ contract undefined6_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1631721600;
+        EffectiveTime = 1631750400;
         CloseTime = 1000;
-        OutSideClosingDate = 1648656000;
-        sellerName = "Gogoro Inc.";
+        OutSideClosingDate = 1648684800;
+        sellerName = "Princeville Global HK Limited";
         seller = address(0);
-        buyerName =["Starship Merger Sub I Limited"];
+        buyerName =["Poema Global Holdings Corp."];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -39,7 +39,7 @@ contract undefined6_synthesized {
         uint currentTime = oracle.getTime();
         require(currentTime <= CloseTime, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 0;
+        uint256 price = 2011251500;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);

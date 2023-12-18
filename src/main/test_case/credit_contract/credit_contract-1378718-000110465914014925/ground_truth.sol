@@ -25,9 +25,9 @@ contract CreditAgreement_5 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1392134400;
+        EffectiveTime = 1392163200;
         CloseTime = 1000;
-        OutSideClosingDate = 1512576000;
+        OutSideClosingDate = 1512604800;
         sellerName = "WESCO AIRCRAFT HARDWARE CORP.";
         seller = address(0);
         buyerName =["Lenders"];

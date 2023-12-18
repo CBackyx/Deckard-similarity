@@ -25,7 +25,7 @@ contract RegistrationRightAgreement_8 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1630339200;
+        EffectiveTime = 1630368000;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
         sellerName = "Simplicity Esports and Gaming Company";

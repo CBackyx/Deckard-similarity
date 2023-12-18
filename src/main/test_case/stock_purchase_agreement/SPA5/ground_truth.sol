@@ -25,12 +25,12 @@ contract undefined_5 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1311868800;
+        EffectiveTime = 1311897600;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "Griffin Ventures, Ltd.";
+        sellerName = "Griffin Ventures";
         seller = address(0);
-        buyerName =["the investors listed on Schedule A hereto"];
+        buyerName =["investors"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

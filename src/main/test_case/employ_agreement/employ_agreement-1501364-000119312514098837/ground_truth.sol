@@ -25,9 +25,9 @@ contract undefined_7 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1392739200;
+        EffectiveTime = 1392768000;
         CloseTime = 1000;
-        OutSideClosingDate = 1419955200;
+        OutSideClosingDate = 1419984000;
         sellerName = "David Paulson";
         seller = address(0);
         buyerName =["ROCKVILLE FINANCIAL, INC."];

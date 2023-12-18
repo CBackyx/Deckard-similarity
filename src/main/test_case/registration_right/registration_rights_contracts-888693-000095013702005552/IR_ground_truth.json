@@ -1,7 +1,7 @@
 {
     "ContractCategory": "RegistrationRightAgreement",
     "SellerName": [
-        "ISCO International, Inc."
+        "ISCO International"
     ],
     "BuyerName": [
         ""
@@ -21,7 +21,7 @@
                 ""
             ],
             "To": [
-                "ISCO International, Inc."
+                "ISCO International"
             ],
             "PurchasePrice": "4000000",
             "TimeLimit": {
@@ -34,8 +34,8 @@
     ],
     "Transfers": true,
     "Terminations": {
-        "OtherTermination": false,
+        "OtherTermination": true,
         "OutOfDateTermination": false,
-        "TransferTermination": false
+        "TransferTermination": true
     }
 }

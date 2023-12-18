@@ -1,7 +1,7 @@
 {
     "ContractCategory": "RegistrationRightAgreement",
     "SellerName": [
-        "GENOCEA BIOSCIENCES, INC."
+        "Company"
     ],
     "BuyerName": [
         "LIGHTHOUSE CAPITAL PARTNERS VI, L.P."
@@ -21,7 +21,7 @@
                 "LIGHTHOUSE CAPITAL PARTNERS VI, L.P."
             ],
             "To": [
-                "GENOCEA BIOSCIENCES, INC."
+                "Company"
             ],
             "PurchasePrice": "1000",
             "TimeLimit": {

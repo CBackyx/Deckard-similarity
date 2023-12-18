@@ -1,9 +1,9 @@
 {
     "SellerName": [
-        "Griffin Ventures, Ltd."
+        "Griffin Ventures"
     ],
     "BuyerName": [
-        "the investors listed on Schedule A hereto"
+        "investors"
     ],
     "EffectiveTime": [
         "July 29, 2011,"
@@ -15,10 +15,10 @@
     "Payments": [
         {
             "From": [
-                "the investors listed on Schedule A hereto"
+                "investors"
             ],
             "To": [
-                "Griffin Ventures, Ltd."
+                "Griffin Ventures"
             ],
             "PurchasePrice": "37100",
             "TimeLimit": {

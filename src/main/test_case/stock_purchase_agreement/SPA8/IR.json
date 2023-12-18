@@ -1,39 +1,38 @@
 {
+    "ContractCategory": "StockPurchaseAgreement",
+    "SellerName": [
+        "Mark Capital"
+    ],
     "BuyerName": [
         "Craig Pierson"
     ],
-    "CloseTime": [
-        ""
-    ],
-    "ContractCategory": "StockPurchaseAgreement",
     "EffectiveTime": [
         "6th  February, 2007,"
     ],
+    "CloseTime": [],
     "OutSideClosingDate": [],
     "Payments": [
         {
             "From": [
                 "Craig Pierson"
             ],
-            "PurchasePrice": "35000.0",
-            "TimeLimit": {
-                "leftOp": "now",
-                "operator": "<=",
-                "rightOp": "CloseTime"
-            },
             "To": [
                 "Mark Capital"
             ],
+            "TimeLimit": {
+                "operator": "<=",
+                "leftOp": "now",
+                "rightOp": "CloseTime",
+                "disabled": false
+            },
+            "PurchasePrice": 35000.0,
             "Transfer": false
         }
     ],
-    "SellerName": [
-        "Mark Capital"
-    ],
+    "Transfers": true,
     "Terminations": {
-        "OtherTermination": false,
+        "TransferTermination": false,
         "OutOfDateTermination": false,
-        "TransferTermination": false
-    },
-    "Transfers": true
+        "OtherTermination": true
+    }
 }

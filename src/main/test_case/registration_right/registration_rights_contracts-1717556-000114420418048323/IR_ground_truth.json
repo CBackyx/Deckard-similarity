@@ -1,7 +1,7 @@
 {
     "ContractCategory": "RegistrationRightAgreement",
     "SellerName": [
-        "Xspand Products Lab, Inc."
+        "Xspand Products Lab"
     ],
     "BuyerName": [
         ""
@@ -21,7 +21,7 @@
                 ""
             ],
             "To": [
-                "Xspand Products Lab, Inc."
+                "Xspand Products Lab"
             ],
             "PurchasePrice": "1000",
             "TimeLimit": {
@@ -35,7 +35,7 @@
     "Transfers": true,
     "Terminations": {
         "OtherTermination": false,
-        "OutOfDateTermination": true,
-        "TransferTermination": true
+        "OutOfDateTermination": false,
+        "TransferTermination": false
     }
 }

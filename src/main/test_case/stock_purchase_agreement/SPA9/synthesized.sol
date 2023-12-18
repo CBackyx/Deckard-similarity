@@ -25,12 +25,12 @@ contract undefined_9 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1257091200;
+        EffectiveTime = 1257120000;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "";
+        sellerName = "BETWEEN LOCATION BASED TECHNOLOGIES";
         seller = address(0);
-        buyerName =[""];
+        buyerName =["Allen Simon"];
         buyer =[address(0)];
     }
     function pay_0() public payable {
@@ -91,6 +91,20 @@ contract undefined_9 {
         }
         require(validSender);
         fileHashMap[fileName] = hashCode;
+    }
+    function terminateByOthers() public {
+        uint currentTime = oracle.getTime();
+        require(currentTime <= CloseTime);
+        bool conditionState = oracle.getConditionState();
+        require(conditionState);
+        emit TerminatedByOthers();
+        uint buyerNum = buyerName.length;
+        for(uint i = 0;
+        i < buyerNum;
+        i ++) {
+            state[i] = State.Inactive;
+            buyer[i].transfer(pricePayedByBuyer[i]);
+        }
     }
     function close() public {
         uint currentTime = oracle.getTime();

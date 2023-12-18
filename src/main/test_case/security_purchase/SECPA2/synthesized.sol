@@ -25,12 +25,12 @@ contract SecurityPurchaseAgreement_2 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1619539200;
+        EffectiveTime = 1619568000;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
         sellerName = "TEGO CYBER INC.";
         seller = address(0);
-        buyerName =["TEGO CYBER INC."];
+        buyerName =["DOMINIQUE JOYAL"];
         buyer =[address(0)];
     }
     function pay_0() public payable {

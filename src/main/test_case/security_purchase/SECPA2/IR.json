@@ -1,39 +1,38 @@
 {
-    "BuyerName": [
+    "ContractCategory": "StockPurchaseAgreement",
+    "SellerName": [
         "TEGO CYBER INC."
     ],
-    "CloseTime": [
-        ""
+    "BuyerName": [
+        "DOMINIQUE JOYAL"
     ],
-    "ContractCategory": "SecurityPurchaseAgreement",
     "EffectiveTime": [
         "April 28, 2021,"
     ],
+    "CloseTime": [],
     "OutSideClosingDate": [],
     "Payments": [
         {
             "From": [
-                "TEGO CYBER INC."
+                "DOMINIQUE JOYAL"
             ],
-            "PurchasePrice": "33507.5",
-            "TimeLimit": {
-                "leftOp": "now",
-                "operator": "<=",
-                "rightOp": "CloseTime"
-            },
             "To": [
                 "TEGO CYBER INC."
             ],
+            "TimeLimit": {
+                "operator": "<=",
+                "leftOp": "now",
+                "rightOp": "CloseTime",
+                "disabled": false
+            },
+            "PurchasePrice": 33507.5,
             "Transfer": true
         }
     ],
-    "SellerName": [
-        "TEGO CYBER INC."
-    ],
+    "Transfers": true,
     "Terminations": {
-        "OtherTermination": true,
+        "TransferTermination": false,
         "OutOfDateTermination": false,
-        "TransferTermination": false
-    },
-    "Transfers": true
+        "OtherTermination": true
+    }
 }

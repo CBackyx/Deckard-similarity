@@ -1,6 +1,6 @@
 import "./../../OracleTest.sol";
 pragma solidity 0.5.16;
-contract undefined5_synthesized {
+contract PlanAndMergerAgreement_5 {
     address payable public seller;
     address payable[] public buyer;
     OracleTest internal oracle;
@@ -25,21 +25,21 @@ contract undefined5_synthesized {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1534089600;
+        EffectiveTime = 1534118400;
         CloseTime = 1000;
-        OutSideClosingDate = 1546185600;
-        sellerName = "AGILITI, INC.";
+        OutSideClosingDate = 1563926400;
+        sellerName = "Agiliti";
         seller = address(0);
-        buyerName =["UMPIRE SPAC MERGER SUB, INC."];
+        buyerName =["FEDERAL STREET ACQUISITION CORP."];
         buyer =[address(0)];
     }
     function pay_0() public payable {
         require(state[0] == State.Created || state[0] == State.Locked);
         require(msg.sender == buyer[0]);
         uint currentTime = oracle.getTime();
-        require(currentTime <= CloseTime, "Time later than Close time");
+        require(currentTime <= CloseTime-2, "Time later than Close time");
         uint256 currentPrice = oracle.getPrice();
-        uint256 price = 0;
+        uint256 price = 1580000000;
         price = price / currentPrice;
         require(msg.value == price);
         emit Payed(0);
@@ -65,7 +65,7 @@ contract undefined5_synthesized {
     function payRelease_0() public {
         require(msg.sender == buyer[0]);
         uint currentTime = oracle.getTime();
-        require(currentTime <= CloseTime, "Time later than Close time");
+        require(currentTime <= CloseTime-2, "Time later than Close time");
         require(purchaseBuyerConfirmed[0]);
         require(purchaseSellerConfirmed[0]);
         emit Released(0);

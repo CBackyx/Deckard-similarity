@@ -1,7 +1,7 @@
 {
     "ContractCategory": "UnderWritingAgeement",
     "SellerName": [
-        "Wachovia Commercial Mortgage Securities, Inc."
+        "Wachovia Bank"
     ],
     "BuyerName": [
         ""
@@ -21,7 +21,7 @@
                 ""
             ],
             "To": [
-                "Wachovia Commercial Mortgage Securities, Inc."
+                "Wachovia Bank"
             ],
             "PurchasePrice": "1614545341",
             "TimeLimit": {
@@ -35,7 +35,7 @@
     "Transfers": true,
     "Terminations": {
         "OtherTermination": true,
-        "OutOfDateTermination": false,
+        "OutOfDateTermination": true,
         "TransferTermination": true
     }
 }

@@ -25,7 +25,7 @@ contract MiscAgreement_2 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1340812800;
+        EffectiveTime = 1340841600;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
         sellerName = "Nationstar Mortgage LLC";

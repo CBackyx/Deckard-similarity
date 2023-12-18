@@ -25,7 +25,7 @@ contract MiscAgreement_3 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1616428800;
+        EffectiveTime = 1616457600;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
         sellerName = "EMERY SHIPPING CORPORATION";

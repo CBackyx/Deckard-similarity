@@ -25,10 +25,10 @@ contract RegistrationRightAgreement_5 {
     event TerminatedByOthers();
     event Closed();
     constructor() public payable {
-        EffectiveTime = 1319472000;
+        EffectiveTime = 1319500800;
         CloseTime = 1000;
         OutSideClosingDate = 1000;
-        sellerName = "GENOCEA BIOSCIENCES, INC.";
+        sellerName = "Company";
         seller = address(0);
         buyerName =["LIGHTHOUSE CAPITAL PARTNERS VI, L.P."];
         buyer =[address(0)];

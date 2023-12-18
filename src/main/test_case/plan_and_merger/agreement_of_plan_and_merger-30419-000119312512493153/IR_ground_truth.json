@@ -27,7 +27,7 @@
                 "operator": "<=",
                 "rightOp": "CloseTime"
             },
-            "Transfer": false
+            "Transfer": true
         }
     ],
     "Transfers": true,

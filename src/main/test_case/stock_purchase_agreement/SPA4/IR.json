@@ -1,39 +1,38 @@
 {
+    "ContractCategory": "StockPurchaseAgreement",
+    "SellerName": [
+        "Rita Mallatt"
+    ],
     "BuyerName": [
         "1847 Cabinets Inc."
     ],
-    "CloseTime": [
-        ""
-    ],
-    "ContractCategory": "StockPurchaseAgreement",
     "EffectiveTime": [
         "August 27, 2020"
     ],
+    "CloseTime": [],
     "OutSideClosingDate": [],
     "Payments": [
         {
             "From": [
                 "1847 Cabinets Inc."
             ],
-            "PurchasePrice": "6650000",
-            "TimeLimit": {
-                "leftOp": "now",
-                "operator": "<=",
-                "rightOp": "CloseTime"
-            },
             "To": [
                 "Rita Mallatt"
             ],
+            "TimeLimit": {
+                "operator": "<=",
+                "leftOp": "now",
+                "rightOp": "CloseTime",
+                "disabled": false
+            },
+            "PurchasePrice": 6650000,
             "Transfer": false
         }
     ],
-    "SellerName": [
-        "Rita Mallatt"
-    ],
+    "Transfers": true,
     "Terminations": {
-        "OtherTermination": true,
+        "TransferTermination": true,
         "OutOfDateTermination": false,
-        "TransferTermination": true
-    },
-    "Transfers": true
+        "OtherTermination": true
+    }
 }
